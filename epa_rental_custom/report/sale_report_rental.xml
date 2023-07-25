@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template
+        id="epa_saleorder_document_report_inherit_stock"
+        inherit_id="sale.report_saleorder_document"
+    >
+        <xpath expr="//div[hasclass('page')]" position="after">
+            <div style="display:block; clear:both; page-break-after:always;" />
+
+            <div class="page">
+                <table class="table table-bordered">
+
+                    <div class="mt-4">
+                        <center>
+                            <strong>
+                                <span class="text-danger"># ID da requisção: <span t-field="doc.id" />
+                                    #</span>
+                            </strong>
+                            <br />
+                            <span>Aprovação pelo gerente: <strong>
+                                    <span t-field="doc.state" />
+                                </strong>
+                            </span>
+                            <br />
+                            <span>Data da geração deste documento: <strong>
+                                    <span t-field="doc.date_order" />
+                                </strong>
+                            </span>
+                        </center>
+                    </div>
+                    <table class="table table-bordered" name="nota">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Número da Nota Fiscal de Ativo</span>
+                                </td>
+                                <td>
+                                    <span>Verificar field</span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <table class="table table-bordered" name="projeto">
+                        <tbody>
+                            <tr>
+                                <td width="20%">
+                                    <span>Solicitante:
+                                        <strong t-field="doc.user_id.name"/>
+                                    </span>
+                                </td>
+                                <td width="20%">
+                                    <span>Estoquista:
+                                        <strong>Verificar field</strong>
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span>Projeto:
+                                        <strong>Verificar field</strong>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>Gerente:
+                                        <strong>Verificar field</strong>
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <center>Responsável:
+                                        <strong>Verificar field</strong>
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <center>Técnico de Campo:
+                                        <strong>Verificar field</strong>
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Data da solicitação:
+                                        <strong t-field="doc.order_line.start_date"/>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>Data expextativa recebimento:
+                                        <strong t-field="doc.order_line.end_date"/>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered" name="movimento">
+                        <tbody>
+                            <tr>
+                                <td width="20%">
+                                    <span>Local retirada/entrega do pedido</span>
+                                </td>
+                                <td width="40%">
+                                    <span></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <span>Movimento (Entrada/Saída)</span>
+                                </td>
+                                <td width="40%">
+                                    <span></span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <!-- <table class="table table-bordered" name="solicitante">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Obs (Solicitante)</span>
+                                </td>
+                                <td>
+                                    <span></span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <table class="table table-bordered" name="estoquista">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>Obs (Estoquista)</span>
+                                </td>
+                                <td>
+                                    <span></span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table> -->
+                    <h5>Tabela de Itens:</h5>
+                    <table class="table table-bordered" name="itens">
+                        <thead>
+
+                            <tr>
+
+                                <td>
+                                    <strong>ID</strong>
+                                </td>
+                                <td>
+                                    <strong>Item Crítico</strong>
+                                </td>
+                                <td>
+                                    <strong>Nº Ativo</strong>
+                                </td>
+                                <td>
+                                    <strong>Qtde. Retirada</strong>
+                                </td>
+                                <td>
+                                    <strong>Qtde. Devolvida</strong>
+                                </td>
+                                <td>
+                                    <strong>Status da devolução</strong>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="doc.order_line" t-as="order">
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span t-field="order.product_id.id" />
+                                        </strong>
+                                    </td>
+                                    <td>
+                                        <strong>
+                                            <span t-field="order.product_id.name" />
+                                        </strong>
+                                    </td>
+                                    <td>
+                                        <strong><!-- Verificar esse campo--></strong>
+                                    </td>
+                                    <td>
+                                        <strong>
+                                            <span t-field="order.rental_qty"/>
+                                        </strong>
+                                    </td>
+                                    <td>
+                                        <strong><!-- Verificar esse campo--></strong>
+                                    </td>
+                                    <td>
+                                        <strong><!-- Verificar esse campo--></strong>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+
+                    </table>
+                    <div style="display:block; clear:both; page-break-after:always;" />
+
+                    <table class="table table-bordered" name="observacao">
+                        <tbody>
+                            <tr>
+                                <td width="15%" height="600">
+                                    Observações
+                                </td>
+                                <td colspan="2" width="60%" height="600">
+                                    <span></span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <table class="table table-bordered" name="campo">
+                        <tbody>
+
+                            <tr class="table-active">
+                                <td colspan="2">
+                                    <center>NA SAÍDA DO CAMPO:</center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Assinatura do responsável pela entrega dos materias:</span>
+                                </td>
+                                <td width="20%">
+                                    <span>Data:</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Assinatura do responsável pela retirada dos materias:</span>
+                                </td>
+                                <td width="20%">
+                                    <span>Data:</span>
+                                </td>
+                            </tr>
+                            <tr class="table-active">
+                                <td colspan="2">
+                                    <center>NO RETORNO DO CAMPO:</center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Assinatura do responsável pelo recebimento dos materias:</span>
+                                </td>
+                                <td width="20%">
+                                    <span>Data:</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Assinatura do responsável pela devolução dos materias:</span>
+                                </td>
+                                <td width="20%">
+                                    <span>Data:</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </table>
+            </div>
+        </xpath>
+    </template>
+</odoo>

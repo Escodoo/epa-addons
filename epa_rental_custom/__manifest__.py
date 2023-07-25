@@ -13,6 +13,7 @@
     "data": [
         "views/sale_order_line.xml",
         "views/sale_order.xml",
+        "report/sale_report_rental.xml",
     ],
     "demo": [],
 }
