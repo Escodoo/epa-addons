@@ -1,0 +1,239 @@
+<odoo>
+  <template id="report_epa_report_picking_inherit" inherit_id="stock.report_picking">
+
+    <xpath expr="//div[hasclass('page')]" position="after">
+
+      <div style="display:block; clear:both; page-break-after:always;" />
+
+      <div class="page">
+
+        <div class="mt-4">
+          <center>
+            <strong>
+              <span class="text-danger"># ID DA REQUISIÇÃO: <span
+                                    t-field="o.id"
+                                /> #</span>
+            </strong>
+            <br />
+            <span>Aprovação pelo gerente: <strong>
+                <span t-field="o.state" />
+              </strong>
+            </span>
+            <br />
+            <span>Data de geração deste documento: <span t-field="o.date_done" />
+            </span>
+          </center>
+        </div>
+
+        <table class="table table-bordered mt-4" name="epa_info">
+          <tbody>
+            <!-- #TODO: falta confirmar sobre esses dados, não encontrei no stock.picking a parte de
+            estoquista, gerente, projeto -->
+            <tr>
+              <td>Solicitante: <strong> FALTA REVISAR <span
+                                        t-field="o.partner_id.name"
+                                    />
+                </strong>
+              </td>
+              <td>Estoquista: <strong> FALTA REVISAR <span
+                                        t-field="o.company_id.name"
+                                    />
+                </strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Projeto: <strong>FALTA REVISAR
+                </strong></td>
+              <td>Gerente: <strong>FALTA REVISAR
+                </strong></td>
+            </tr>
+            <tr>
+              <td>Responsável pelo projeto: </td>
+              <td>
+                <strong>FALTA REVISAR
+                </strong>
+              </td>
+            </tr>
+            <tr>
+              <td>Data da solicitação: <strong>
+                  <span t-field="o.date_done" />
+                </strong></td>
+              <td>Data expectativa recebimento: <strong>
+                  <span t-field="o.scheduled_date" />
+                </strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered mt-4" name="epa_dest_loc">
+          <tbody>
+            <tr>
+              <td width="40%">Local Retirada/Entrega do Pedido: </td>
+              <td>
+                <strong><span t-field="o.location_id.name" /> - <span
+                                        t-field="o.location_dest_id.name"
+                                    /></strong>
+              </td>
+            </tr>
+            <tr>
+              <td width="40%">Movimento (Entrada/Saida): </td>
+              <td>
+                <t t-if="o.picking_type_id.code == 'outgoing'">
+                  <strong>Saída</strong>
+                </t>
+                <t t-elif="o.picking_type_id.code == 'incoming'">
+                  <strong>Entrada</strong>
+                </t>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered mt-4" name="epa_observacao">
+          <tbody>
+            <tr>
+              <td width="20%">Observação: </td>
+              <td>
+                <strong>
+                  <span t-field="o.note" />
+                </strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <table class="table table-bordered mt-4" name="epa_produtos">
+          <thead>
+            <tr class="table-active">
+              <td colspan="6">
+                <center>
+                  <strong>ITENS</strong>
+                </center>
+              </td>
+            </tr>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Item Crítico</th>
+              <th scope="col">Unidade</th>
+              <th scope="col">Qtd. Retirada</th>
+              <th scope="col">Qtd. Devolvida</th>
+              <th scope="col">Status da devolução</th>
+            </tr>
+          </thead>
+          <tbody>
+            <t
+                            t-foreach="o.move_ids_without_package.sorted(key=lambda m: m.product_id.id)"
+                            t-as="move"
+                        >
+              <t
+                                t-foreach="move.move_line_ids.sorted(key=lambda ml: ml.location_id.id)"
+                                t-as="ml"
+                            >
+                <tr>
+                  <td>
+                    <span t-field="ml.product_id.id" />
+                  </td>
+                  <td>
+                    <span t-field="ml.product_id.display_name" />
+                  </td>
+                  <td>
+                    <!-- esse atributo falta revisar, ele retorna Unidade por exemplo, mas deveria
+                    ser algo em torno da medida como UN ou outros tipos. -->
+                    <span t-field="ml.product_id.uom_id.category_id.name" />
+                  </td>
+                  <td>
+                    <span
+                                            t-if="o.state == 'done' and not ml.move_id.picking_type_id.return_picking_type_id"
+                                            t-field="ml.qty_done"
+                                        />
+                  </td>
+                  <td>
+                    <span
+                                            t-if="o.state == 'done' and ml.move_id.picking_type_id.return_picking_type_id"
+                                            t-field="ml.qty_done"
+                                        />
+                    <span t-if="o.state != 'done'" t-field="ml.product_uom_qty" />
+                  </td>
+                  <td>
+                    <span
+                                            t-if="ml.move_id.picking_type_id.return_picking_type_id"
+                                            t-field="ml.move_id.state"
+                                        />
+                  </td>
+                </tr>
+              </t>
+            </t>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display:block; clear:both; page-break-after:always;" />
+
+      <div class="page">
+        <table class="table table-bordered mt-5" name="epa_validade">
+          <tr>
+            <td width="20%">
+              <strong>Água Deionizada</strong>
+            </td>
+            <td width="40%">Lote: </td>
+            <td>Validade do Lote: </td>
+          </tr>
+          <tr>
+            <td width="20%">
+              <strong>Água Mineral</strong>
+            </td>
+            <td width="40%">Lote: </td>
+            <td>Validade do Lote: </td>
+          </tr>
+          <tr>
+            <td width="20%">
+              <strong>Detergente Neutro</strong>
+            </td>
+            <td width="40%">Lote: </td>
+            <td>Validade do Lote: </td>
+          </tr>
+          <tr class="text-center" style="height: 500px">
+            <td style="vertical-align: middle;">Observações</td>
+            <td colspan="2" />
+          </tr>
+        </table>
+
+        <table class="table table-bordered mt-5" name="epa_assinatura">
+          <tr class="table-active">
+            <td colspan="2">
+              <center>
+                <strong>NA SAÍDA DO CAMPO</strong>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>Assinatura do responsável pela entrega dos materiais: </td>
+            <td width="20%">Data: </td>
+          </tr>
+          <tr>
+            <td>Assinatura do responsável pela retirada dos materiais: </td>
+            <td width="20%">Data: </td>
+          </tr>
+          <tr class="table-active">
+            <td colspan="2">
+              <center>
+                <strong>NO RETORNO DO CAMPO</strong>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>Assinatura do responsável pela recebimento dos materiais: </td>
+            <td>Data: </td>
+          </tr>
+          <tr>
+            <td>Assinatura do responsável pela devolução dos materiais: </td>
+            <td>Data: </td>
+          </tr>
+        </table>
+
+      </div>
+    </xpath>
+
+  </template>
+</odoo>
