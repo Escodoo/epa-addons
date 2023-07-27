@@ -1,0 +1,11 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* epa_rental_custom
+#
+msgid ""
+msgstr ""
+
+#. module: epa_rental_custom
+#: model:ir.model.fields,field_description:epa_rental_custom.field_sale_order__responsible_technical
+msgid "Responsible Technical"
+msgstr "Responsável Técnico"
