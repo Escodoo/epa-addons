@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+  <record id="epa_project_stock_request_order_custom_form" model="ir.ui.view">
+    <field name="name">project.task.stock.request.form</field>
+    <field name="model">project.task</field>
+    <field
+            name="inherit_id"
+            ref="project_stock_request.project_task_stock_request_order_view_form"
+        />
+    <field name="arch" type="xml">
+      <xpath
+                expr="//field[@name='stock_request_order_ids']/tree/field[@name='create_date']"
+                position="after"
+            >
+        <field name="price_subtotal" style="float: center;" />
+
+      </xpath>
+    </field>
+  </record>
+
+  <record id="project_stock_request_order_view_form2" model="ir.ui.view">
+    <field name="name">project.stock.request.order.form2</field>
+    <field name="model">project.project</field>
+    <field name="inherit_id" ref="project.edit_project" />
+    <field name="arch" type="xml">
+      <xpath
+                expr="//field[@name='stock_request_order_ids']/tree/field[@name='create_date']"
+                position="after"
+            >
+        <field name="price_subtotal" style="float: center;" />
+
+      </xpath>
+    </field>
+  </record>
+</odoo>
