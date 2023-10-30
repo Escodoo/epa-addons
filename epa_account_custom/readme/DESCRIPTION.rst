@@ -1,1 +1,0 @@
-- Hide Register Payment Button from Bills
