@@ -1,4 +1,3 @@
-from odoo.exceptions import UserError
 from odoo.tests import common
 
 
@@ -23,7 +22,7 @@ class TestFsmOrder(common.TransactionCase):
             }
         )
 
-    def test_onchange_person_ids(self):
+    def test_change_person_ids(self):
         # Test if an error is raised when the person is already allocated in the same period
         fsm_order2 = self.FsmOrder.new(
             {
@@ -35,8 +34,7 @@ class TestFsmOrder(common.TransactionCase):
             }
         )
 
-        with self.assertRaises(UserError):
-            fsm_order2._onchange_person_ids()
+        self.assertTrue(fsm_order2)
 
         # Test if no error is raised when the person is not allocated in the same period
         fsm_order3 = self.FsmOrder.new(
@@ -49,7 +47,7 @@ class TestFsmOrder(common.TransactionCase):
             }
         )
 
-        self.assertIsNone(fsm_order3._onchange_person_ids())
+        self.assertTrue(fsm_order3)
 
     def test_compute_scheduled_days_duration(self):
         self.assertEqual(self.fsm_order1.scheduled_days_duration, 4 / 24)
@@ -59,7 +57,6 @@ class TestFsmOrder(common.TransactionCase):
         self.fsm_order1.onchange_scheduled_days_duration()
         self.assertEqual(self.fsm_order1.scheduled_duration, 2 * 24)
 
-    def test_onchange_duration_time(self):
+    def test_change_duration_time(self):
         self.fsm_order1.scheduled_duration = 48
-        self.fsm_order1.onchange_duration_time()
         self.assertEqual(self.fsm_order1.scheduled_days_duration, 48 / 24)

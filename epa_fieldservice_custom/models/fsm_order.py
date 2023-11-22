@@ -91,7 +91,6 @@ class FsmOrder(models.Model):
         else:
             self.schedule_date_end = False
 
-    @api.multi
     def write(self, vals):
         res = super().write(vals)
         self._compute_person_reservation()
