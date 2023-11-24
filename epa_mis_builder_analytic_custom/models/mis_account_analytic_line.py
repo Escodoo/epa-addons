@@ -1,13 +1,12 @@
 # Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import api, models, tools
+from odoo import models, tools
 
 
 class MisAccountAnalyticLine(models.Model):
     _inherit = "mis.account.analytic.line"
 
-    @api.model_cr
     def init(self):
         tools.drop_view_if_exists(self._cr, "mis_account_analytic_line")
         self._cr.execute(

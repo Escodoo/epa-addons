@@ -9,13 +9,13 @@ class ResCompany(models.Model):
 
     @api.model
     def _default_mis_analytic_income_account_id(self):
-        return self.env["ir.property"].get(
+        return self.env["ir.property"]._get(
             "property_account_income_categ_id", "product.category"
         )
 
     @api.model
     def _default_mis_analytic_expense_account_id(self):
-        return self.env["ir.property"].get(
+        return self.env["ir.property"]._get(
             "property_account_expense_categ_id", "product.category"
         )
 
