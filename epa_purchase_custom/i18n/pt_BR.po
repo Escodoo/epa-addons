@@ -30,4 +30,4 @@ msgstr "<strong>Fornecedor:</strong>"
 #. module: epa_purchase_custom
 #: model_terms:ir.ui.view,arch_db:epa_purchase_custom.report_purchaseorder_document
 msgid "<strong>Your Order Reference:</strong>"
-msgstr "<strong>Sua Pedido de Referência:</strong>"
+msgstr "<strong>Seu Pedido de Referência:</strong>"

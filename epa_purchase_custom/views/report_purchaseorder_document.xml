@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+    <!-- oca-hooks:disable=xml-dangerous-qweb-replace-low-priority  -->
     <template
         id="report_purchaseorder_document"
         name="report_purchaseorder_document in (epa_purchase_custom)"
