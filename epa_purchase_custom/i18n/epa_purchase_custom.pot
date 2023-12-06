@@ -1,14 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* epa_purchase_custom
+# 	* epa_purchase_custom
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-01 01:38+0000\n"
-"PO-Revision-Date: 2022-08-01 01:38+0000\n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,8 +14,21 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: epa_purchase_custom
+#: model_terms:ir.ui.view,arch_db:epa_purchase_custom.res_config_settings_view_form_purchase
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+
+#. module: epa_purchase_custom
 #: model_terms:ir.ui.view,arch_db:epa_purchase_custom.report_purchaseorder_document
 msgid "<strong>Order Date:</strong>"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model_terms:ir.ui.view,arch_db:epa_purchase_custom.report_purchaseorder_document
+msgid "<strong>Purchaser:</strong>"
 msgstr ""
 
 #. module: epa_purchase_custom
@@ -30,3 +41,73 @@ msgstr ""
 msgid "<strong>Your Order Reference:</strong>"
 msgstr ""
 
+#. module: epa_purchase_custom
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_fsm_location__partner_block_invoice_validation_exceeding_purchase
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_fsm_person__partner_block_invoice_validation_exceeding_purchase
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_company__block_invoice_validation_exceeding_purchase
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_config_settings__block_invoice_validation_exceeding_purchase
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_partner__partner_block_invoice_validation_exceeding_purchase
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_users__partner_block_invoice_validation_exceeding_purchase
+#: model_terms:ir.ui.view,arch_db:epa_purchase_custom.res_config_settings_view_form_purchase
+msgid "Block invoice validation exceeding purchase"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model,name:epa_purchase_custom.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model,name:epa_purchase_custom.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model,name:epa_purchase_custom.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_account_move__display_name
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_company__display_name
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_account_move__id
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_purchase_order__id
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_company__id
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_config_settings__id
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model,name:epa_purchase_custom.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_account_move____last_update
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_company____last_update
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:epa_purchase_custom.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: model:ir.model,name:epa_purchase_custom.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: epa_purchase_custom
+#: code:addons/epa_purchase_custom/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot validate this invoice because the total amount exceeds the total "
+"amount on the purchase order."
+msgstr ""
