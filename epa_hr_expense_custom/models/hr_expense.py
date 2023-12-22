@@ -2,13 +2,12 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 
-from odoo import api, models
+from odoo import models
 
 
 class HrExpense(models.Model):
     _inherit = "hr.expense"
 
-    @api.multi
     def _get_account_move_line_values(self):
         move_line_values_by_expense = super()._get_account_move_line_values()
         for expense_id, move_lines in move_line_values_by_expense.items():
