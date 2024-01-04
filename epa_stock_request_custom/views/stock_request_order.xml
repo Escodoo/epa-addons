@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 - TODAY, Rodrigo Neves Trindade <rodrigo.trindade@escodoo.com.br>
+     Copyright 2023 - TODAY,Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="stock_request_order_form_view">
+        <field
+            name="name"
+        >stock.request.order.form (in epa_stock_request_custom)</field>
+        <field name="model">stock.request.order</field>
+        <field name="inherit_id" ref="stock_request.stock_request_order_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='stock_request_ids']/tree/field[@name='product_uom_qty']"
+                position="after"
+            >
+                <field
+                    name="egd_price_subtotal"
+                    options="{'currency_field': 'currency_id'}"
+                />
+            </xpath>
+
+
+            <xpath expr="//field[@name='stock_request_ids']" position="after">
+
+                <group
+                    class="oe_subtotal_footer oe_right"
+                    colspan="2"
+                    name="egd_price_total"
+                >
+                    <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                        <label for="egd_price_total" />
+                    </div>
+                    <field
+                        name="egd_price_total"
+                        nolabel="1"
+                        class="oe_subtotal_footer_separator"
+                        widget='monetary'
+                        options="{'currency_field': 'currency_id'}"
+                    />
+                </group>
+
+            </xpath>
+        </field>
+    </record>
+<!--
+    <record model="ir.ui.view" id="stock_request_order_search_view">
+        <field name="name">stock.request.order.search (in epa_stock_request_custom)</field>
+        <field name="model">stock.request.order</field>
+        <field name="inherit_id" ref="TODO othermodule.search_view"/>
+        <field name="arch" type="xml">
+
+        </field>
+    </record>
+-->
+    <record model="ir.ui.view" id="stock_request_order_tree_view">
+        <field
+            name="name"
+        >stock.request.order.tree (in epa_stock_request_custom)</field>
+        <field name="model">stock.request.order</field>
+        <field name="inherit_id" ref="stock_request.stock_request_order_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field
+                    name="egd_price_total"
+                    widget='monetary'
+                    options="{'currency_field': 'currency_id'}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>
