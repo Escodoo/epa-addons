@@ -6,7 +6,7 @@ from datetime import datetime, time, timedelta
 import pytz
 from pytz import timezone
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class HrAttendanceSheet(models.Model):
@@ -31,8 +31,8 @@ class HrAttendanceSheet(models.Model):
             )
 
     # EPA Refactor
-    @api.multi
-    def get_attendance(self, data):
+    # flake8: noqa: C901 (is too complex)
+    def get_attendance(self):
         """Get Attendance History Of Employee."""
         attendance_ids = self.env["hr.attendance"].search(
             [
@@ -139,7 +139,7 @@ class HrAttendanceSheet(models.Model):
                             "total_planned_attendance": self.employee_id.with_context(
                                 exclude_public_holidays=True,
                                 employee_id=self.employee_id.id,
-                            ).get_work_days_data(
+                            )._get_work_days_data_batch(
                                 datetime.combine(
                                     date, time(0, 0, 0, 0, tzinfo=pytz.timezone(tz))
                                 ),
@@ -159,6 +159,8 @@ class HrAttendanceSheet(models.Model):
                                     ),
                                 ],
                             )[
+                                self.employee_id.id
+                            ][
                                 "hours"
                             ]
                         }
@@ -168,7 +170,6 @@ class HrAttendanceSheet(models.Model):
                     self.env["hr.attendance.sheet.line"].create(vals)
         self.employee_id.attendance_sheet_id = self.id or False
 
-    @api.multi
     def compute_attendance_data(self):
         super().compute_attendance_data()
         for rec in self:
@@ -192,7 +193,6 @@ class HrAttendanceSheet(models.Model):
                 total_overtime if total_overtime >= 0 else rec.total_overtime_real
             )
 
-    @api.multi
     def print_document(self):
         self.ensure_one()
         [data] = self.read()
