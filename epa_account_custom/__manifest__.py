@@ -11,7 +11,7 @@
     "website": "https://github.com/Escodoo/epa-addons",
     "depends": ["payment", "l10n_br_account"],
     "data": [
-        "views/account_invoice.xml",
+        "views/account_move.xml",
     ],
     "demo": [],
 }
