@@ -19,6 +19,7 @@
                 position="attributes"
             >
                 <attribute name="invisible">0</attribute>
+                <attribute name="optional">show</attribute>
             </xpath>
         </field>
     </record>
