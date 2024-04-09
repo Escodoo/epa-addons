@@ -35,7 +35,7 @@
             >
                 <attribute name="attrs">
                     {
-                        'invisible': [('document_type', '=', False)],
+                        'invisible': [('document_type_id', '=', False)],
                         'required': [('issuer', '=', 'partner'), ('document_type_id', '!=', False)],
                         'readonly': [('state', '!=', 'draft')]
                     }
