@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <menuitem
+        id="epa_menu_payment_root"
+        name="Payments"
+        sequence="5"
+        groups="account.group_account_readonly"
+        parent="account.menu_finance"
+    />
+
+    <menuitem
+        id="account_payment_order.account_payment_order_outbound_menu"
+        action="account_payment_order.account_payment_order_outbound_action"
+        parent="epa_menu_payment_root"
+        sequence="1"
+    />
+    <menuitem
+        id="account_payment_order.account_payment_order_inbound_menu"
+        action="account_payment_order.account_payment_order_inbound_action"
+        parent="epa_menu_payment_root"
+        sequence="2"
+    />
+
+</odoo>
