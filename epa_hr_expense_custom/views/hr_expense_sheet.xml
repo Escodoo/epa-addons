@@ -16,6 +16,14 @@
                     attrs="{'invisible': [('state', 'not in', ['approve', 'post', 'done'])]}"
                 />
             </field>
+            <xpath expr="//field[@name='advance_sheet_id']" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('advance', '=', True)]}</attribute>
+                <attribute
+                    name="modifiers"
+                >{'invisible': [('advance', '=', True)]}</attribute>
+            </xpath>
         </field>
     </record>
 
