@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="hr_expense_sheet_form_view">
+        <field
+            name="name"
+        >hr.expense.sheet.form (in epa_hr_expense_advance_clearing_custom)</field>
+        <field name="model">hr.expense.sheet</field>
+        <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='advance_sheet_id']" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': [('advance', '=', True)]}</attribute>
+                <attribute
+                    name="modifiers"
+                >{'invisible': [('advance', '=', True)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
