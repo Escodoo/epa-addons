@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Matheus Marques <matheus.marques@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="account_move_form_view">
+        <field name="name">account.move.form (in epa_account_reconcile_custom)</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='open_reconcile_view']" position="attributes">
+                <!-- Remove os atributos invisíveis do botão -->
+                <attribute name="attrs">{'invisible': [('id', '=', False)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>
