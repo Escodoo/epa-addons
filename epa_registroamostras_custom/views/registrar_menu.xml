@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Ação Amostras -->
+    <record model="ir.actions.act_window" id="action_registro_amostras">
+        <field name="name">Registro Amostras</field>
+        <field name="res_model">regamostras.amostra</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Ação Laboratórios -->
+    <record model="ir.actions.act_window" id="action_laboratorios">
+        <field name="name">Laboratórios</field>
+        <field name="res_model">laboratorios.laboratorio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Ação Testes -->
+    <record model="ir.actions.act_window" id="action_amostra_parametros">
+        <field name="name">Parametros</field>
+        <field name="res_model">amostra.parametros</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Ação Filtros -->
+    <record model="ir.actions.act_window" id="action_filtros_table">
+        <field name="name">Filtros</field>
+        <field name="res_model">filtros.table</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Menu Items -->
+    <menuitem name="Registro de Amostras" id="regamostras_root_menu" />
+
+    <menuitem
+        name="Amostras"
+        id="regamostras_menu"
+        parent="regamostras_root_menu"
+        action="action_registro_amostras"
+        sequence="1"
+    />
+
+    <menuitem
+        name="Laboratórios"
+        id="laboratorios_menu"
+        parent="regamostras_root_menu"
+        action="action_laboratorios"
+        sequence="2"
+    />
+
+    <menuitem
+        name="Parâmetros"
+        id="parametros_menu"
+        parent="regamostras_root_menu"
+        action="action_amostra_parametros"
+        sequence="3"
+    />
+
+    <menuitem
+        name="Filtros"
+        id="filtros_menu"
+        parent="regamostras_root_menu"
+        action="action_filtros_table"
+        sequence="4"
+    />
+
+
+</odoo>

@@ -1,0 +1,11 @@
+<odoo>
+    <record id="id_autoincrement_amostra" model="ir.sequence">
+        <field name="name">ID Amostra Auto-incremental</field>
+        <field name="code">sequencia_codigo_amostra</field>
+        <field name="active">TRUE</field>
+        <field name="prefix">EPA</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

@@ -1,0 +1,45 @@
+.two_hdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-left: 18%;
+    padding-top: 2%;
+}
+
+.vert2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
+    padding-right: 25%;
+    padding-top: 2%;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: end;
+}
+
+.vert3 {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    padding-top: 1%;
+}

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_regamostras_amostra,access.access.regamostras.amostra,model_regamostras_amostra,base.group_user,1,1,1,1
+access_laboratorios_laboratorio,access.access.laboratorios.laboratorio,model_laboratorios_laboratorio,base.group_user,1,1,1,1
+access_amostras_parametros,access.access.amostra.parametros,model_amostra_parametros,base.group_user,1,1,1,1
+access_filtros_table,access.access.filtros.table,model_filtros_table,base.group_user,1,1,1,1

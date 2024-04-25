@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Definição do tree view -->
+<odoo>
+    <record model="ir.ui.view" id="regamostras_amostra_view_tree">
+        <field name="name">Amostras Tree View</field>
+        <field
+            name="mode"
+        >primary</field> <!-- NOTE: Copiado de alguma solução da internet, talvez possa remover depois-->
+        <field name="model">regamostras.amostra</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree string="Lista de Amostras">
+                <field name="id_no" width='15%' />
+                <field name="projeto" width='10%' />
+                <field name="laboratorio" width='18%' />
+                <field name="matriz" width='12%' />
+                <field name="ponto" width='10%' />
+                <field name="data_coleta" width='15%' />
+                <field
+                    name="status"
+                    width='10%'
+                    decoration-info="status == 'recebido'"
+                    decoration-warning="status == 'publicado'"
+                    decoration-success="status == 'concluido'"
+                    decoration-danger="status == 'pendente'"
+                    widget="badge"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Tree View Laboratorios -->
+    <record model="ir.ui.view" id="laboratorios_view_tree">
+        <field name="name">Laboratórios Tree View</field>
+        <field
+            name="mode"
+        >primary</field> <!-- NOTE: Copiado de alguma solução da internet, talvez possa remover depois-->
+        <field name="model">laboratorios.laboratorio</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree string="Laboratórios">
+                <field name="id" />
+                <field name="nome" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Tree View Testes -->
+    <record model="ir.ui.view" id="parametros_view_tree">
+        <field name="name">Parametros Tree View</field>
+        <field name="model">amostra.parametros</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree string="Parametros">
+                <field name="id" />
+                <field name="nome" />
+                <field name="filtros" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Tree View Testes -->
+    <record model="ir.ui.view" id="filtros_view_tree">
+        <field name="name">Parametros Tree View</field>
+        <field name="model">filtros.table</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree string="Filtros">
+                <field name="id" />
+                <field name="filtro" />
+            </tree>
+        </field>
+    </record>
+
+
+<!-- Definição do form view -->
+    <record model="ir.ui.view" id="regamostras_amostra_view_form">
+        <field name="name">Amostras Form View</field>
+        <field name="model">regamostras.amostra</field>
+        <field name="arch" type="xml">
+            <form string="Amostra">
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable':0}" />
+                </header>
+                <sheet>
+                    <notebook>
+                        <page string="Registro" class="page">
+                        <group>
+                        <group>
+                            <field name="projeto" />
+                        </group>
+                        <group>
+                            <field name="cliente" />
+                        </group>
+                        <group>
+                            <field name="ponto" />
+                            <field
+                                        name="profundidade"
+                                        default="0"
+                                        attrs="{'readonly':[('matriz', '!=', 'solo')], 'required':[('matriz', '==', 'solo')]}"
+                                    />
+                            <field name="profundidade" invisible="1" />
+                            <field
+                                        name="laudo"
+                                        attrs="{'readonly':[('status', '=', 'aberto')]}"
+                                    />
+                        </group>
+                        <group>
+                            <field name="matriz" />
+                            <field name="grupo" />
+                            <field name="orcamento" placeholder="0.00" />
+                            <field name="faturamento" placeholder="0.00" />
+                        </group>
+                        <group>
+                            <field name="localizacao" style="width:257%" />
+                            <field
+                                        name="funcionario"
+                                        style="width:257%"
+                                        placeholder="Funcionário responsável pela coleta"
+                                    />
+                        </group>
+                        </group>
+                        </page>
+                        <page string="Laboratório">
+                            <h3> Laboratório </h3>
+                            <field
+                                name="laboratorio"
+                                style="width:30%"
+                                placeholder="Laboratório"
+                                context="{'custom_display_name': 'labnomes'}"
+                            /> <!-- domain="[('tag', '=', 'laboratorio')]"-->
+                        </page>
+                        <page string="Parâmetros">
+                            <field
+                                name="parametros"
+                                placeholder="Parâmetros"
+                                context="{'custom_display_name':'testesnomes'}"
+                            />
+                        </page>
+                        <page string="Datas">
+                        <div class="two_hdiv">
+                            <div class="vert">
+                                <h4> Realização da Coleta: </h4>
+                                <field name="data_coleta" />
+                            </div>
+                            <div class="vert2">
+                                <h4> Recebimento da Coleta: </h4>
+                                <field name="data_recebimento" />
+                            </div>
+                        </div>
+                        <div class="two_hdiv">
+                            <div class="vert">
+                                <h4> Previsão de Entrega do Laudo: </h4>
+                                <field name="previsao_entrega" />
+                            </div>
+                            <div class="vert2">
+                                <h4> Envio ao Laboratório: </h4>
+                                <field name="data_envio" />
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="vert3">
+                                <h4> Criação do Registro: </h4>
+                                <field name="data_criacao" readonly='True' />
+                            </div>
+                        </div>
+                        </page>
+                        <page string="Pendência">
+                            <h4> Existe Pendência? </h4>
+                            <group>
+                                <field name='pendencia_sim' />
+                            </group>
+                            <group>
+                                <field name='pendencia_nao' />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
