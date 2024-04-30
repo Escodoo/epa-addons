@@ -14,5 +14,6 @@
         "views/res_partner.xml",
         "views/report_purchaseorder_document.xml",
         "views/res_config_settings.xml",
+        "views/purchase_view.xml",
     ],
 }
