@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* epa_hr_attendance_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-06 16:59+0000\n"
+"PO-Revision-Date: 2024-05-06 14:00-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: epa_hr_attendance_custom
+#: model:ir.model,name:epa_hr_attendance_custom.model_hr_employee
+msgid "Description"
+msgstr ""
+
+#. module: epa_hr_attendance_custom
+#: model:ir.model.fields,field_description:epa_hr_attendance_custom.field_hr_employee__display_name
+msgid "Display Name"
+msgstr "Exibir Nome"
+
+#. module: epa_hr_attendance_custom
+#: model:ir.model.fields,field_description:epa_hr_attendance_custom.field_hr_employee__id
+msgid "ID"
+msgstr ""
+
+#. module: epa_hr_attendance_custom
+#: model:ir.model.fields,field_description:epa_hr_attendance_custom.field_hr_employee____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: epa_hr_attendance_custom
+#: model_terms:ir.ui.view,arch_db:epa_hr_attendance_custom.hr_employee_employee_filter_view
+msgid "Signed In"
+msgstr "Em Expediente"
+
+#. module: epa_hr_attendance_custom
+#: model_terms:ir.ui.view,arch_db:epa_hr_attendance_custom.hr_employee_employee_filter_view
+msgid "Signed Out"
+msgstr "Sem Expediente"
