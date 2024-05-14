@@ -1,0 +1,12 @@
+<!--
+    Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <menuitem
+        id="hr_holidays.hr_leave_menu_my"
+        parent="hr_holidays.menu_hr_holidays_my_leaves"
+        action="hr_holidays.hr_leave_action_my"
+        sequence="-1"
+    />
+</odoo>
