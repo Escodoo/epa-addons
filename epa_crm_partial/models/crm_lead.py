@@ -29,14 +29,14 @@ class CrmLead(models.Model):
     subcontracting_laboratory = fields.Boolean("Laboratory")
     subcontracting_probe = fields.Boolean("Probe")
     subcontracting_sampling = fields.Boolean("Sampling")
-    codename = fields.Char("Codename")
+    alias_name = fields.Char("Codename")
+    subcontracting_others = fields.Char(string="Others")
     proposal_date = fields.Date("Proposal Date")
 
-    subcontracting_others = fields.Many2one(string="Others")
-    group_companies = fields.Many2one(string="Group Companies")
-    company_contacts = fields.Many2one(string="Company Contacts")
-    service_types = fields.Many2one(string="Types of Service")
-    project_manager = fields.Many2one(string="Project Manager")
+    group_companies = fields.Many2one('res.company', string="Group Companies")
+    company_contacts = fields.Many2one('res.partner', string="Company Contacts")
+    service_types = fields.Many2one('project.task', string="Types of Service")
+    project_manager = fields.Many2one('hr.employee', string="Project Manager")
 
     @api.onchange(
         "interesting_client",
