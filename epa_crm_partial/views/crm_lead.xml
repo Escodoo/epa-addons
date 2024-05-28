@@ -56,7 +56,7 @@
                         <group>
                             <field name='service_types' />
                             <field name='codename' />
-                            <field name='project_manager' />
+                            <field name='project_manager' domain="[('job_title','=','Gerente de Projetos')]"/>
                         </group>
                     </div>
                 </page>
