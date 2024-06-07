@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form (in epa_sale_stock_custom)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale_shipping']" position="inside">
+                <field name="picking_status" states="sale,done" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree (in epa_sale_stock_custom)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <field name="invoice_status" position="before">
+                <field
+                    name="picking_status"
+                    decoration-success="picking_status == 'delivered'"
+                    decoration-info="picking_status == 'to_deliver'"
+                    decoration-warning="picking_status == 'partially_delivered'"
+                    widget="badge"
+                    optional="show"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_quotation_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree (in epa_sale_stock_custom)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <field name="invoice_status" position="before">
+                <field name="picking_status" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_sales_order_filter" model="ir.ui.view">
+        <field
+            name="name"
+        >sale.order.search.inherit.sale (in epa_sale_stock_custom)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter" />
+        <field name="arch" type="xml">
+            <filter name="my_sale_orders_filter" position="after">
+                <separator />
+                <filter
+                    string="Not Fully Delivered"
+                    name="not_fully_delivered"
+                    domain="[('picking_status', 'in', ('to_deliver', 'partially_delivered'))]"
+                />
+                <filter
+                    string="Fully Delivered"
+                    name="fully_delivered"
+                    domain="[('picking_status', '=', 'delivered')]"
+                />
+            </filter>
+        </field>
+    </record>
+
+</odoo>
