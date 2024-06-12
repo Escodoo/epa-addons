@@ -20,6 +20,7 @@ class SaleOrder(models.Model):
         compute="_compute_picking_status",
         store=True,
         readonly=True,
+        default="no",
     )
 
     @api.depends("state", "picking_ids.state")

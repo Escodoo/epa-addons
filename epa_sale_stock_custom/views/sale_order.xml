@@ -66,4 +66,27 @@
         </field>
     </record>
 
+    <record id="ir_cron_recompute_picking_status" model="ir.cron">
+        <field name="name">Recompute Picking Status</field>
+        <field name="model_id" ref="model_sale_order" />
+        <field name="state">code</field>
+        <field
+            name="code"
+        >for order in env["sale.order"].search([]): order._compute_picking_status()</field>
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+    </record>
+
+    <record id="action_recompute_picking_status" model="ir.actions.server">
+        <field name="name">Recompute Picking Status</field>
+        <field name="model_id" ref="sale.model_sale_order" />
+        <field name="binding_model_id" ref="sale.model_sale_order" />
+        <field name="binding_type">action</field>
+        <field name="state">code</field>
+        <field name="code">for order in records: order._compute_picking_status()</field>
+    </record>
+
 </odoo>
