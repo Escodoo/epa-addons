@@ -1,1 +1,2 @@
 - Hide Register Payment Button from Bills
+- Flexible Installments
