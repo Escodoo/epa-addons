@@ -21,6 +21,14 @@
                 <attribute name="invisible">0</attribute>
                 <attribute name="optional">show</attribute>
             </xpath>
+            <xpath expr="//sheet//label[@for='journal_id']" position="before">
+                <field
+                    name="flexible_installments"
+                    groups="account.group_account_user"
+                    states="draft"
+                    attrs="{'invisible': [('invoice_payment_term_id', '=', False)]}"
+                />
+            </xpath>
         </field>
     </record>
 
