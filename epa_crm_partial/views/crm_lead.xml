@@ -8,6 +8,9 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name='is_won_stage' invisible="1" />
+            </xpath>
             <xpath expr="//page[@name='lead']" position="after">
                 <page name="epa_requirements" string="Requirements">
                     <group>
@@ -60,6 +63,25 @@
                         </group>
                     </div>
                 </page>
+            </xpath>
+            <xpath expr="//field[@name='stage_id']" position="attributes">
+                <attribute name="options" eval="{}" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_form_oppor_view" model="ir.ui.view">
+        <field name="name">crm.lead.oppor.inherited.crm (in crm_partial)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//button[@name='action_sale_quotations_new']"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'invisible': [('is_won_stage', '!=', True)]}</attribute>
             </xpath>
         </field>
     </record>

@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/epa-addons",
-    "depends": ["crm"],
+    "depends": ["sale_crm"],
     "data": [
         "views/crm_lead.xml",
     ],

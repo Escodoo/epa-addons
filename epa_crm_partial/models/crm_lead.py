@@ -36,6 +36,19 @@ class CrmLead(models.Model):
     company_contacts = fields.Many2one("res.partner", string="Company Contacts")
     service_types = fields.Many2one("project.task", string="Types of Service")
     project_manager = fields.Many2one("hr.employee", string="Project Manager")
+    is_won_stage = fields.Boolean(
+        string="Is Won Stage",
+        default=False,
+        compute="_compute_is_won_stage",
+    )
+
+    @api.depends("stage_id.is_won", "lost_reason")
+    def _compute_is_won_stage(self):
+        for lead in self:
+            if lead.lost_reason:
+                lead.is_won_stage = False
+            else:
+                lead.is_won_stage = lead.stage_id.is_won
 
     @api.onchange(
         "interesting_client",
