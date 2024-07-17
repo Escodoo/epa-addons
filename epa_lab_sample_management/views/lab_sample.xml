@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+    Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+    Copyright 2024 - TODAY, Rodrigo Rameh <rodrigo_rameh@grupoepa.com.br>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <record model="ir.ui.view" id="lab_sample_form_view">
+        <field name="name">lab.sample.form (in epa_lab_sample_management)</field>
+        <field name="model">lab.sample</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="status" widget="statusbar" />
+                </header>
+                <sheet>
+                    <field name="currency_id" invisible="1" />
+                    <notebook>
+                        <page string="Sample" class="page">
+                            <group>
+                                <group>
+                                    <field name="project_id" />
+                                    <field name="partner_id" />
+                                    <field
+                                        name="employee_id"
+                                        placeholder="Responsible for collection"
+                                    />
+                                    <field name="matrix_id" />
+                                    <field name="lab_id" placeholder="Laboratory" />
+                                </group>
+                                <group>
+                                    <field name="location" />
+                                    <fieldn name="depth" />
+                                    <field name="budget" placeholder="0.00" />
+                                    <field name="billing" placeholder="0.00" />
+                                    <field
+                                        name="report"
+                                        attrs="{'readonly':[('status', '=', 'draft')]}"
+                                    />
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Date">
+                            <group>
+                                <field name="collection_date" />
+                                <field name="reception_date" />
+                                <field name="delivery_forecast" />
+                                <field name="lab_submission_date" />
+                                <field name="creation_date" readonly='True' />
+                            </group>
+                        </page>
+                        <page string="Pending">
+                            <group>
+                                <field name='issue_pending' />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter" />
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="lab_sample_tree_view">
+        <field name="name">lab.sample.tree (in epa_lab_sample_management)</field>
+        <field name="model">lab.sample</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="project_id" />
+                <field name="lab_id" />
+                <field name="matrix_id" />
+                <field name="collection_date" />
+                <field
+                    name="status"
+                    widget="badge"
+                    decoration-info="status == 'received'"
+                    decoration-warning="status == 'published'"
+                    decoration-success="status == 'done'"
+                    decoration-danger="status == 'pending'"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="lab_sample_act_window">
+        <field name="name">Lab Sample</field>
+        <field name="res_model">lab.sample</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Sample
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

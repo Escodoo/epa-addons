@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lab_laboratory,lab.laboratory,model_lab_laboratory,base.group_user,1,1,1,1
+access_lab_matrix,lab.matrix,model_lab_matrix,base.group_user,1,1,1,1
+access_lab_sample,lab.sample,model_lab_sample,base.group_user,1,1,1,1
