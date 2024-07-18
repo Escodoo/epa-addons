@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="lab_sample_replicate_wizard_view">
+        <field
+            name="name"
+        >lab.sample.replicate.wizard (in epa_lab_sample_management)</field>
+        <field name="model">lab.sample.replicate.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Replicate Lab Sample">
+                <group>
+                    <field name="quantity" />
+                </group>
+                <footer>
+                    <button
+                        string="Replicate"
+                        name="action_replicate_lab_sample"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button
+                        string="Cancel"
+                        class="btn btn-secondary"
+                        special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_open_lab_sample_replicate_wizard" model="ir.actions.server">
+        <field name="name">Replicate Lab Sample</field>
+        <field name="model_id" ref="model_lab_sample" />
+        <field name="binding_model_id" ref="model_lab_sample" />
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = {
+                    "type": "ir.actions.act_window",
+                    "res_model": "lab.sample.replicate.wizard",
+                    "views": [[False, "form"]],
+                    "name": "Replicate Lab Sample",
+                    "target": "new",
+                    "context": {
+                        "active_ids": records.ids,
+                    },
+                }
+        </field>
+    </record>
+
+</odoo>

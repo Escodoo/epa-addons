@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
 
-    <record model="ir.ui.view" id="lab_matrix_form_view">
-        <field name="name">lab.matrix.form (in epa_lab_sample_management)</field>
-        <field name="model">lab.matrix</field>
+    <record model="ir.ui.view" id="lab_parameter_group_form_view">
+        <field
+            name="name"
+        >lab.parameter.group.form (in epa_lab_sample_management)</field>
+        <field name="model">lab.parameter.group</field>
         <field name="arch" type="xml">
             <form>
                 <header>
@@ -21,9 +23,11 @@
     </record>
 
 
-    <record model="ir.ui.view" id="lab_matrix_tree_view">
-        <field name="name">lab.matrix.tree (in epa_lab_sample_management)</field>
-        <field name="model">lab.matrix</field>
+    <record model="ir.ui.view" id="lab_parameter_group_tree_view">
+        <field
+            name="name"
+        >lab.parameter.group.tree (in epa_lab_sample_management)</field>
+        <field name="model">lab.parameter.group</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
@@ -31,16 +35,17 @@
         </field>
     </record>
 
-    <record model="ir.actions.act_window" id="lab_matrix_act_window">
-        <field name="name">Matrix</field>
-        <field name="res_model">lab.matrix</field>
+    <record model="ir.actions.act_window" id="lab_parameter_group_act_window">
+        <field name="name">Lab Parameter Group</field>
+        <field name="res_model">lab.parameter.group</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[]</field>
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first Matrix
+                Create your first Parameter Group
             </p>
         </field>
     </record>
+
 </odoo>
