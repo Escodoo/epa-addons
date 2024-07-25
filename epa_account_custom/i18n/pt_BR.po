@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* epa_account_custom
+#
+# Translators:
+# Wesley Oliveira <wesley.oliveira@escodoo.com.br>, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-25 15:02+0000\n"
+"PO-Revision-Date: 2024-07-25 15:02+0000\n"
+"Last-Translator: Wesley Oliveira, 2024\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: epa_account_custom
+#: model:res.groups,name:epa_account_custom.group_allow_back_move_to_draft
+msgid "Allow Back Move to Draft"
+msgstr "Permitir Voltar Lançamento para Rascunho"
+
+#. module: epa_account_custom
+#: model:res.groups,comment:epa_account_custom.group_allow_back_move_to_draft
+msgid "Allow back account move to draft when in payment order"
+msgstr "Permitir voltar lançamento de diário para rascunho quando estiver em uma ordem de pagamento"
+
+#. module: epa_account_custom
+#: model:ir.model.fields,field_description:epa_account_custom.field_account_move__display_name
+msgid "Display Name"
+msgstr "Nome Exibido"
+
+#. module: epa_account_custom
+#: model:ir.model.fields,field_description:epa_account_custom.field_account_bank_statement_line__flexible_installments
+#: model:ir.model.fields,field_description:epa_account_custom.field_account_move__flexible_installments
+#: model:ir.model.fields,field_description:epa_account_custom.field_account_payment__flexible_installments
+msgid "Flexible Installments"
+msgstr "Parcelas Flexiveis"
+
+#. module: epa_account_custom
+#: model:ir.model.fields,field_description:epa_account_custom.field_account_move__id
+msgid "ID"
+msgstr "ID"
+
+#. module: epa_account_custom
+#: model:ir.model,name:epa_account_custom.model_account_move
+msgid "Journal Entry"
+msgstr "Lançamento de Diário"
+
+#. module: epa_account_custom
+#: model:ir.model.fields,field_description:epa_account_custom.field_account_move____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: epa_account_custom
+#: code:addons/epa_account_custom/models/account_move.py:0
+#, python-format
+msgid ""
+"You dont't have permission to change a Journal Entry to draft when it's "
+"associated with a Payment Order."
+msgstr ""
+"Você não tem permissão para alterar um Lançamento de Diário para rascunho "
+"quando o mesmo estiver associado a uma Ordem de Pagamento."

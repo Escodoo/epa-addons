@@ -1,2 +1,3 @@
 - Hide Register Payment Button from Bills
 - Flexible Installments
+- Allow Back Move to Draft when in Payment Order and have the necessary permissions, otherwise an error is triggered

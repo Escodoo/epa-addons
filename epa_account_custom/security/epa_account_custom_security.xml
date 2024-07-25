@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="group_allow_back_move_to_draft" model="res.groups">
+        <field name="name">Allow Back Move to Draft</field>
+        <field
+            name="comment"
+        >Allow back account move to draft when in payment order</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+
+</odoo>
