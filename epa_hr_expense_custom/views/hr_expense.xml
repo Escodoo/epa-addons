@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="hr_expense_form_view">
+        <field name="name">hr.expense.form (in epa_hr_expense_custom)</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='payment_mode']/ancestor::group"
+                position="after"
+            >
+                <group>
+                    <group>
+                        <field name="show_fiscal_document" invisible="1" />
+                        <field
+                            name="fiscal_document_number"
+                            attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('show_fiscal_document', '=', True)]}"
+                        />
+                        <field
+                            name="fiscal_document_partner_id"
+                            attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('show_fiscal_document', '=', True)]}"
+                        />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

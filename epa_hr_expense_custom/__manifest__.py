@@ -11,6 +11,7 @@
     "website": "https://github.com/Escodoo/epa-addons",
     "depends": ["hr_expense"],
     "data": [
+        "views/hr_expense.xml",
         "views/hr_expense_sheet.xml",
     ],
     "demo": [],
