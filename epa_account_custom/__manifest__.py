@@ -10,8 +10,6 @@
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/epa-addons",
     "depends": ["payment", "l10n_br_account"],
-    "data": [
-        "views/account_move.xml",
-    ],
+    "data": ["views/account_move.xml", "security/epa_account_custom_security.xml"],
     "demo": [],
 }
