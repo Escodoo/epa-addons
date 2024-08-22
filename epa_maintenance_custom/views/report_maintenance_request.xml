@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template
+        id="report_maintenance_request_document"
+        inherit_id="base_maintenance.report_maintenance_request_document"
+    >
+        <xpath expr="//t[@t-call='web.internal_layout']" position="attributes">
+            <attribute name="t-call">web.external_layout</attribute>
+        </xpath>
+    </template>
+</odoo>
