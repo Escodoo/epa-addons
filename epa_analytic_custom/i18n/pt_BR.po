@@ -1,0 +1,182 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* epa_analytic_custom
+#
+# Translators:
+# Wesley Oliveira <wesley.oliveira@escodoo.com.br>, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-10 10:30+0000\n"
+"PO-Revision-Date: 2024-09-10 10:30+0000\n"
+"Last-Translator: Wesley Oliveira, 2024\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_needaction
+msgid "Action Needed"
+msgstr "Ação Necessária"
+
+#. module: epa_analytic_custom
+#: model:res.groups,name:epa_analytic_custom.group_allow_edit_analytic_line
+msgid "Allow Edit Analytic Line"
+msgstr "Permitir Editar Linha Analítica"
+
+#. module: epa_analytic_custom
+#: model:res.groups,comment:epa_analytic_custom.group_allow_edit_analytic_line
+msgid "Allow editing of an analytic line when linked to a journal item"
+msgstr "Permite a edição de uma linha analítica vinculada a um item de diário."
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__amount
+msgid "Amount"
+msgstr "Montante"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__account_id
+msgid "Analytic Account"
+msgstr "Conta Analítica"
+
+#. module: epa_analytic_custom
+#: model:ir.model,name:epa_analytic_custom.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Linha Analítica"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contagem de Anexos"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__date
+msgid "Date"
+msgstr "Data"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__name
+msgid "Description"
+msgstr "Descrição"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canais)"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Parceiros)"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,help:epa_analytic_custom.field_account_analytic_line__message_needaction
+#: model:ir.model.fields,help:epa_analytic_custom.field_account_analytic_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Se marcado, novas mensagens solicitarão sua atenção."
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,help:epa_analytic_custom.field_account_analytic_line__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Se marcado, algumas mensagens tem erro de entrega."
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_is_follower
+msgid "Is Follower"
+msgstr "É um seguidor"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificação em"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Anexo Principal"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_has_error
+msgid "Message Delivery error"
+msgstr "Erro na entrega da Mensagem"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_ids
+msgid "Messages"
+msgstr "Mensagens"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Ações"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de Erros"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,help:epa_analytic_custom.field_account_analytic_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensagens que requer uma ação"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,help:epa_analytic_custom.field_account_analytic_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensagens com erro de entrega"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,help:epa_analytic_custom.field_account_analytic_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Quantidade de mensagens não lidas"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__partner_id
+msgid "Partner"
+msgstr "Parceiro"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__product_id
+msgid "Product"
+msgstr "Produto"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_unread
+msgid "Unread Messages"
+msgstr "Mensagens não lidas"
+
+#. module: epa_analytic_custom
+#: model:ir.model.fields,field_description:epa_analytic_custom.field_account_analytic_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensagens não lidas"
+
+#. module: epa_analytic_custom
+#: code:addons/epa_analytic_custom/models/analytic_line.py:0
+#, python-format
+msgid "You are not allowed to delete analytic lines linked with journal items"
+msgstr "Você não tem permissão para excluir uma linha analítica vinculada a um item de diário"
+
+#. module: epa_analytic_custom
+#: code:addons/epa_analytic_custom/models/analytic_line.py:0
+#, python-format
+msgid "You are not allowed to edit analytic lines linked with journal items"
+msgstr "Você não tem permissão para editar uma linha analítica vinculada a um item de diário"
