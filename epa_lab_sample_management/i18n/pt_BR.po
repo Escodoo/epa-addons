@@ -1,0 +1,621 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* epa_lab_sample_management
+#
+# Translators:
+# Wesley Oliveira <wesley.oliveira@escodoo.com.br>, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-26 19:57+0000\n"
+"PO-Revision-Date: 2024-08-26 19:57+0000\n"
+"Last-Translator: Wesley Oliveira, 2024\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_needaction
+msgid "Action Needed"
+msgstr "Ação Necessária"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_ids
+msgid "Activities"
+msgstr "Atividades"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoração de atividade excepcional"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_state
+msgid "Activity State"
+msgstr "Estado de Atividade"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ícone do Tipo de Atividade"
+
+#. module: epa_lab_sample_management
+#: model:res.groups,name:epa_lab_sample_management.group_lab_sample_manager
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: epa_lab_sample_management
+#: model:res.groups,comment:epa_lab_sample_management.group_lab_sample_user
+msgid "Allow to create and view samples"
+msgstr "Permite criar e visualizar amostras"
+
+#. module: epa_lab_sample_management
+#: model:res.groups,comment:epa_lab_sample_management.group_lab_sample_manager
+msgid "Allow to create samples, matrices, params and params groups."
+msgstr "Permite criar amostras, matrizes, parâmetros e grupos de parâmetros"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__analytic_account_id
+msgid "Analytic Account"
+msgstr "Conta Analítica"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contagem de Anexos"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__billing
+msgid "Billing"
+msgstr "Faturamento"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__budget
+msgid "Budget"
+msgstr "Orçamento"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__status__cancel
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_replicate_wizard_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__collection_date
+msgid "Collection Date"
+msgstr "Data da Coleta"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: epa_lab_sample_management
+#: model:ir.model,name:epa_lab_sample_management.model_res_partner
+msgid "Contact"
+msgstr "Contato"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.actions.act_window,help:epa_lab_sample_management.lab_matrix_act_window
+msgid "Create your first Matrix"
+msgstr "Crie a sua primeira Matriz"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.actions.act_window,help:epa_lab_sample_management.lab_parameter_act_window
+msgid "Create your first Parameter"
+msgstr "Crie o seu primeiro Parâmetro"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.actions.act_window,help:epa_lab_sample_management.lab_parameter_group_act_window
+msgid "Create your first Parameter Group"
+msgstr "Crie o seu primeiro Grupo de Parâmetro"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.actions.act_window,help:epa_lab_sample_management.lab_sample_act_window
+msgid "Create your first Sample"
+msgstr "Crie a sua primeira Amostra"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix__create_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__create_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group__create_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__create_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard__create_uid
+msgid "Created by"
+msgstr "Criado Por"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix__create_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__create_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group__create_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__create_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__currency_id
+msgid "Currency"
+msgstr "Moeda"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__partner_id
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__delivery_forecast
+msgid "Delivery Forecast"
+msgstr "Data Prevista de Entrega"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__depth
+msgid "Depth"
+msgstr "Profundidade"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix__display_name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__display_name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group__display_name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__display_name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard__display_name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__status__done
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Done"
+msgstr "Concluido"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__status__draft
+msgid "Draft"
+msgstr "Rascunho"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__employee_id
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canais)"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Parceiros)"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Ícone do Font Awesome. Ex: fa-tasks"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix__id
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__id
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group__id
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__id
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard__id
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_exception_icon
+msgid "Icon"
+msgstr "Ícone"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ícone para indicar uma atividade excepcional"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_needaction
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Se marcado, novas mensagens solicitarão sua atenção."
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Se marcado, algumas mensagens tem erro de entrega."
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_is_follower
+msgid "Is Follower"
+msgstr "É um seguidor"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_res_partner__is_laboratory
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_res_users__is_laboratory
+msgid "Is Laboratory?"
+msgstr "É Laboratório?"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__is_pending
+msgid "Is Pending?"
+msgstr "Possui Pendência?"
+
+#. module: epa_lab_sample_management
+#: model:ir.model,name:epa_lab_sample_management.model_lab_matrix
+msgid "Lab Matrix"
+msgstr "Matriz"
+
+#. module: epa_lab_sample_management
+#: model:ir.actions.act_window,name:epa_lab_sample_management.lab_parameter_act_window
+#: model:ir.model,name:epa_lab_sample_management.model_lab_parameter
+msgid "Lab Parameter"
+msgstr "Parâmetro"
+
+#. module: epa_lab_sample_management
+#: model:ir.actions.act_window,name:epa_lab_sample_management.lab_parameter_group_act_window
+#: model:ir.model,name:epa_lab_sample_management.model_lab_parameter_group
+msgid "Lab Parameter Group"
+msgstr "Grupo de Parâmetro"
+
+#. module: epa_lab_sample_management
+#: model:ir.actions.act_window,name:epa_lab_sample_management.lab_sample_act_window
+#: model:ir.model,name:epa_lab_sample_management.model_lab_sample
+#: model:ir.module.category,name:epa_lab_sample_management.module_category_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Lab Sample"
+msgstr "Amostra"
+
+#. module: epa_lab_sample_management
+#: model:ir.module.category,name:epa_lab_sample_management.module_category_lab_sample
+msgid "Lab Sample Registration"
+msgstr "Registro de Amostras"
+
+#. module: epa_lab_sample_management
+#: model:ir.model,name:epa_lab_sample_management.model_lab_sample_replicate_wizard
+msgid "Lab Sample Replicate Wizard"
+msgstr "Wizard para Replicar Amostras"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__lab_submission_date
+msgid "Lab Submission Date"
+msgstr "Data de Envio Laboratório"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__laboratory_id
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.view_partner_form
+msgid "Laboratory"
+msgstr "Laboratório"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix____last_update
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter____last_update
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group____last_update
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample____last_update
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard____last_update
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última modificação em"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix__write_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__write_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group__write_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__write_uid
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix__write_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__write_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group__write_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__write_date
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última atualização em"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__location
+msgid "Location"
+msgstr "Local"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Anexo Principal"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Mark as Pending"
+msgstr "Marcar como Pendente"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Mark as Received"
+msgstr "Marcar como Recebido"
+
+#. module: epa_lab_sample_management
+#: model:ir.actions.act_window,name:epa_lab_sample_management.lab_matrix_act_window
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__matrix_id
+#: model:ir.ui.menu,name:epa_lab_sample_management.menu_action_lab_matrix
+msgid "Matrix"
+msgstr "Matriz"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_has_error
+msgid "Message Delivery error"
+msgstr "Erro na entrega da Mensagem"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_ids
+msgid "Messages"
+msgstr "Mensagens"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Prazo da Minha Atividade"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_search_view
+msgid "My Samples"
+msgstr "Minhas Amostras"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_matrix__name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter_group__name
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Prazo Final para Próxima Atividade"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_summary
+msgid "Next Activity Summary"
+msgstr "Próximo Sumário de Atividade"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo da Próxima Atividade"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__is_pending__no
+msgid "No"
+msgstr "Não"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Ações"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample_replicate_wizard__quantity
+msgid "Number of Copies"
+msgstr "Número de Cópias"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de Erros"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensagens que requer uma ação"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensagens com erro de entrega"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Quantidade de mensagens não lidas"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__status__open
+msgid "Open"
+msgstr "Aberto"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_parameter__group_id
+msgid "Parameter Group"
+msgstr "Grupo de Parâmetro"
+
+#. module: epa_lab_sample_management
+#: model:ir.ui.menu,name:epa_lab_sample_management.menu_action_lab_parameter_group
+msgid "Parameter Groups"
+msgstr "Grupos de Parâmetro"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__parameter_ids
+#: model:ir.ui.menu,name:epa_lab_sample_management.menu_action_lab_parameter
+#: model:ir.ui.menu,name:epa_lab_sample_management.menu_parameter
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Parameters"
+msgstr "Parâmetros"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__parameter_group_ids
+msgid "Parameters Groups"
+msgstr "Grupos de Parâmetros"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__status__pending
+msgid "Pending"
+msgstr "Pendente"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__point
+msgid "Point"
+msgstr "Ponto"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Publish"
+msgstr "Publicar"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__status__published
+msgid "Published"
+msgstr "Publicado"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__purchase_order_id
+msgid "Purchase Order"
+msgstr "Pedido de Compra"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__status__received
+msgid "Received"
+msgstr "Recebido"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__reception_date
+msgid "Reception Date"
+msgstr "Data de Recebimento"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_replicate_wizard_view
+msgid "Replicate"
+msgstr "Replicar"
+
+#. module: epa_lab_sample_management
+#: model:ir.actions.server,name:epa_lab_sample_management.action_open_lab_sample_replicate_wizard
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_replicate_wizard_view
+msgid "Replicate Lab Sample"
+msgstr "Replicar Amostras"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__report
+msgid "Report"
+msgstr "Laudo"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_form_view
+msgid "Reset to Draft"
+msgstr "Voltar para Rascunho"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_user_id
+msgid "Responsible User"
+msgstr "Usuário Responsável"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__number
+msgid "Sample Number"
+msgstr "Número da Amostra"
+
+#. module: epa_lab_sample_management
+#: model:ir.ui.menu,name:epa_lab_sample_management.menu_epa_sample_registration
+msgid "Sample Registration"
+msgstr "Registro de Amostra"
+
+#. module: epa_lab_sample_management
+#: model:ir.ui.menu,name:epa_lab_sample_management.menu_action_lab_sample
+msgid "Samples"
+msgstr "Amostras"
+
+#. module: epa_lab_sample_management
+#: model_terms:ir.ui.view,arch_db:epa_lab_sample_management.lab_sample_search_view
+msgid "Samples Following"
+msgstr "Amostras Seguidas por Mim"
+
+#. module: epa_lab_sample_management
+#: model:ir.module.category,description:epa_lab_sample_management.module_category_lab_sample
+msgid "Security rules for Lab Sample Management module."
+msgstr "Regras de segurança para o módulo de Registro de Amostras"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__status
+msgid "Status"
+msgstr "Status"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status baseado em atividades\n"
+"Atrasado: Data definida já passou\n"
+"Hoje: Data de atividade é hoje\n"
+"Planejado: Atividades futuras."
+
+#. module: epa_lab_sample_management
+#: code:addons/epa_lab_sample_management/models/lab_sample.py:0
+#, python-format
+msgid "The location and report fields must be filled in."
+msgstr "Os campos local e laudo devem estar preenchidos."
+
+#. module: epa_lab_sample_management
+#: code:addons/epa_lab_sample_management/models/lab_sample.py:0
+#, python-format
+msgid "The location field must be filled in."
+msgstr "O campo local deve estar preenchido."
+
+#. module: epa_lab_sample_management
+#: code:addons/epa_lab_sample_management/wizard/lab_sample_replicate_wizard.py:0
+#, python-format
+msgid "This sample is a copy of "
+msgstr "Essa amostra é uma cópia de "
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de atividade de exceção registrada."
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_unread
+msgid "Unread Messages"
+msgstr "Mensagens não lidas"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensagens não lidas"
+
+#. module: epa_lab_sample_management
+#: model:res.groups,name:epa_lab_sample_management.group_lab_sample_user
+msgid "User"
+msgstr "Usuário"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__website_message_ids
+msgid "Website Messages"
+msgstr "Mensagens do Website"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__website_message_ids
+msgid "Website communication history"
+msgstr "Histórico de Comunicação do Website"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields.selection,name:epa_lab_sample_management.selection__lab_sample__is_pending__yes
+msgid "Yes"
+msgstr "Sim"

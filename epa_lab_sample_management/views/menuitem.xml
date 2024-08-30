@@ -1,0 +1,42 @@
+<!--
+    Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+    Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <menuitem
+        name="Sample Registration"
+        id="menu_epa_sample_registration"
+        groups="base.group_user"
+        web_icon="epa_lab_sample_management,static/description/icon.png"
+    >
+        <menuitem
+            id="menu_action_lab_sample"
+            name="Samples"
+            action="lab_sample_act_window"
+            sequence="1"
+        />
+        <menuitem
+            id="menu_action_lab_matrix"
+            name="Matrix"
+            action="lab_matrix_act_window"
+            sequence="2"
+        />
+        <menuitem id="menu_parameter" name="Parameters" sequence="3">
+            <menuitem
+                id="menu_action_lab_parameter"
+                name="Parameters"
+                action="lab_parameter_act_window"
+                sequence="1"
+            />
+            <menuitem
+                id="menu_action_lab_parameter_group"
+                name="Parameter Groups"
+                action="lab_parameter_group_act_window"
+                sequence="2"
+            />
+        </menuitem>
+    </menuitem>
+
+</odoo>

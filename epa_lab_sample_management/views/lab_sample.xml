@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+    Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <record model="ir.ui.view" id="lab_sample_form_view">
+        <field name="name">lab.sample.form (in epa_lab_sample_management)</field>
+        <field name="model">lab.sample</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_confirm"
+                        string="Confirm"
+                        class="oe_highlight"
+                        type="object"
+                        attrs="{'invisible': [('status', '!=', 'draft')]}"
+                    />
+                    <button
+                        name="action_received"
+                        string="Mark as Received"
+                        class="oe_highlight"
+                        type="object"
+                        attrs="{'invisible': [('status', '!=', 'open')]}"
+                    />
+                    <button
+                        name="action_publish"
+                        string="Publish"
+                        class="oe_highlight"
+                        type="object"
+                        attrs="{'invisible': [('status', '!=', 'received')]}"
+                    />
+                    <button
+                        name="action_done"
+                        string="Done"
+                        class="oe_highlight"
+                        type="object"
+                        attrs="{'invisible': [('status', 'not in', ['published','pending'])]}"
+                    />
+                    <button
+                        name="action_pending"
+                        string="Mark as Pending"
+                        type="object"
+                        attrs="{'invisible': [('status', 'not in', ['published','done'])]}"
+                    />
+                    <button
+                        name="action_draft"
+                        string="Reset to Draft"
+                        type="object"
+                        attrs="{'invisible' : ['|', ('status', '=', 'draft'), ('id', '=', False)]}"
+                    />
+                    <button
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        attrs="{'invisible' : [('status', '=', 'cancel')]}"
+                    />
+                    <field
+                        name="status"
+                        widget="statusbar"
+                        statusbar_visible="draft,open,received,published,pending,done"
+                    />
+                </header>
+                <sheet>
+                    <field name="currency_id" invisible="1" />
+                    <div class="oe_title">
+                        <h1 attrs="{'invisible': [('name','=','/')]}">
+                            <div>
+                                <label for="name" string="Lab Sample" />
+                            </div>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field
+                                name="company_id"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="laboratory_id"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="analytic_account_id"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="partner_id"
+                                attrs="{'invisible':[('analytic_account_id', '==', False)]}"
+                            />
+                            <field
+                                name="employee_id"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="matrix_id"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="point"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="depth"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="location"
+                                attrs="{'invisible':[('status', '==', 'draft')], 'readonly':[('status', '!=', 'open')]}"
+                            />
+                            <field
+                                name="report"
+                                attrs="{'invisible':[('status', 'in', ['draft','open'])], 'readonly':[('status', '!=', 'received')]}"
+                            />
+                            <field
+                                name="is_pending"
+                                attrs="{'invisible':[('status', 'in', ['draft','open','received'])]}"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="collection_date"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field name="reception_date" />
+                            <field
+                                name="delivery_forecast"
+                                attrs="{'readonly':[('status', '!=', 'draft')]}"
+                            />
+                            <field name="lab_submission_date" />
+                            <field name="budget" />
+                            <field name="billing" readonly="1" />
+                            <field name="purchase_order_id" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Parameters">
+                            <group>
+                                <field
+                                    name="parameter_group_ids"
+                                    widget="many2many_tags"
+                                />
+                            </group>
+                            <field name="parameter_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lab_sample_tree_view">
+        <field name="name">lab.sample.tree (in epa_lab_sample_management)</field>
+        <field name="model">lab.sample</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="company_id" />
+                <field name="laboratory_id" />
+                <field name="analytic_account_id" />
+                <field name="partner_id" />
+                <field name="matrix_id" />
+                <field name="employee_id" />
+                <field name="location" optional="hide" />
+                <field name="report" optional="hide" />
+                <field name="collection_date" />
+                <field name="delivery_forecast" />
+                <field name="reception_date" optional="hide" />
+                <field name="lab_submission_date" optional="hide" />
+                <field name="budget" optional="hide" />
+                <field name="billing" optional="hide" />
+                <field name="purchase_order_id" optional="hide" />
+                <field
+                    name="status"
+                    widget="badge"
+                    decoration-info="status == 'received'"
+                    decoration-warning="status == 'published'"
+                    decoration-success="status == 'done'"
+                    decoration-danger="status == 'pending'"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="lab_sample_search_view" model="ir.ui.view">
+        <field name="name">lab.sample.tree.search (in epa_lab_sample_management)</field>
+        <field name="model">lab.sample</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="company_id" />
+                <field name="laboratory_id" />
+                <field name="analytic_account_id" />
+                <filter
+                    string="My Samples"
+                    name="my_samples"
+                    domain="[('create_uid', '=', uid)]"
+                />
+                <filter
+                    string="Samples Following"
+                    name="samples_following"
+                    domain="[('message_is_follower', '=', True)]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="lab_sample_act_window">
+        <field name="name">Lab Sample</field>
+        <field name="res_model">lab.sample</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field
+            name="context"
+        >{'search_default_my_samples': 1, 'search_default_samples_following': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Sample
+            </p>
+        </field>
+    </record>
+
+</odoo>

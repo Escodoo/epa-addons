@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+manager_access_lab_matrix,lab.matrix,model_lab_matrix,epa_lab_sample_management.group_lab_sample_manager,1,1,1,1
+user_access_lab_matrix,lab.matrix,model_lab_matrix,epa_lab_sample_management.group_lab_sample_user,1,0,0,0
+manager_access_lab_parameter,lab.parameter,model_lab_parameter,epa_lab_sample_management.group_lab_sample_manager,1,1,1,1
+user_access_lab_parameter,lab.parameter,model_lab_parameter,epa_lab_sample_management.group_lab_sample_user,1,0,0,0
+manager_access_lab_parameter_group,lab.parameter.group,model_lab_parameter_group,epa_lab_sample_management.group_lab_sample_manager,1,1,1,1
+user_access_lab_parameter_group,lab.parameter.group,model_lab_parameter_group,epa_lab_sample_management.group_lab_sample_user,1,0,0,0
+user_access_lab_sample,lab.sample,model_lab_sample,epa_lab_sample_management.group_lab_sample_user,1,1,1,1
+user_access_lab_sample_replicate_wizard,lab.sample.replicate.wizard,model_lab_sample_replicate_wizard,epa_lab_sample_management.group_lab_sample_user,1,1,1,1
