@@ -107,7 +107,13 @@
                                 <span t-field="line.date" />
                             </td>
                             <td name="td_day" class="text-right">
-                                <span t-field="line.day" />
+                                <t t-if="line.day == 'Monday'">Segunda-feira</t>
+                                <t t-if="line.day == 'Tuesday'">Terça-feira</t>
+                                <t t-if="line.day == 'Wednesday'">Quarta-feira</t>
+                                <t t-if="line.day == 'Thursday'">Quinta-feira</t>
+                                <t t-if="line.day == 'Friday'">Sexta-feira</t>
+                                <t t-if="line.day == 'Saturday'">Sábado</t>
+                                <t t-if="line.day == 'Sunday'">Domingo</t>
                             </td>
                             <td name="td_psignin" class="text-right">
                                 <span
