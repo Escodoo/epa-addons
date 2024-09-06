@@ -102,7 +102,10 @@
                 </thead>
                 <tbody class="sale_tbody">
                     <t t-foreach="doc.attendance_sheet_ids" t-as="line">
-                        <tr class="bg-200 font-weight-bold">
+                        <tr
+                                t-if="not (line.day in ['Saturday', 'Sunday'] and line.total_attendance == 0)"
+                                class="bg-200 font-weight-bold"
+                            >
                             <td name="td_date">
                                 <span t-field="line.date" />
                             </td>
@@ -168,7 +171,7 @@
                                         t-field="line.total_attendance"
                                         t-options='{"widget": "float_time"}'
                                     />
-                            </td>
+                            </td>  
                             <td name="td_status" class="text-right">
                                 <span t-field="line.status" />
                             </td>
