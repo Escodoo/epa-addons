@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_order_forminherited" model="ir.ui.view">
+        <field name="name">sale.order.form.inherited (in epa_sale_crm_custom)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <!-- Insert new pages after the 'customer_signature' page -->
+            <xpath expr="//page[@name='customer_signature']" position="after">
+                <page name="attachment_files" string="Attachments CRM">
+                    <group>
+                        <field
+                            name="attachment_ids"
+                            class="o_attachment_file_list"
+                            add-label="Add an Attachment File"
+                            nolabel="1"
+                            context="{'default_res_model': 'sale.order', 'default_res_id': active_id}"
+                        >
+                            <kanban
+                                string="Attachment Files"
+                                default_order="create_date desc"
+                            >
+                                <field name="id" />
+                                <field name="name" />
+                                <field name="file_size" />
+                                <field name="type" />
+                                <field name="mimetype" />
+                                <field name="create_date" />
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div
+                                            class="card oe_kanban_global_click p-0 o_kanban_card"
+                                        >
+                                            <div
+                                                class="card-header bg-light d-flex align-items-center"
+                                            >
+                                                <div class="o_file_icon mr-2">
+                                                    <t
+                                                        t-if="record.type.raw_value == 'binary'"
+                                                    >
+                                                        <i
+                                                            class="fa fa-file fa-2x text-primary"
+                                                            aria-hidden="true"
+                                                        />
+                                                    </t>
+                                                    <t
+                                                        t-if="record.type.raw_value == 'url'"
+                                                    >
+                                                        <i
+                                                            class="fa fa-link fa-2x text-success"
+                                                            aria-hidden="true"
+                                                        />
+                                                    </t>
+                                                </div>
+                                                <h4 class="card-title m-0">
+                                                    <small>
+                                                        <t t-esc="record.name.value" />
+                                                    </small>
+                                                </h4>
+                                            </div>
+                                            <div class="card-body p-2">
+                                                <p class="text-muted">
+                                                    <t
+                                                        t-esc="record.create_date.value"
+                                                    />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
