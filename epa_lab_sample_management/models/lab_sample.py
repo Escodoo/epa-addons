@@ -204,3 +204,10 @@ class LabSample(models.Model):
             )
         else:
             self.parameter_ids = None
+
+    def message_subscribe(self, partner_ids=None, channel_ids=None):
+        if not self.user_has_groups(
+            "epa_lab_sample_management.group_lab_sample_manager"
+        ):
+            raise ValidationError(_("Just administrators can change the followers."))
+        return super(LabSample, self).message_subscribe(partner_ids, channel_ids)
