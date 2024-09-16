@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/epa-addons",
-    "depends": ["analytic"],
+    "depends": ["analytic", "account_payment_order"],
     "data": [
         "security/analytic_line_security.xml",
         "views/analytic_line.xml",
