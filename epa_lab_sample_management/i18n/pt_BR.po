@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-26 19:57+0000\n"
-"PO-Revision-Date: 2024-08-26 19:57+0000\n"
+"POT-Creation-Date: 2024-09-16 19:57+0000\n"
+"PO-Revision-Date: 2024-09-16 19:57+0000\n"
 "Last-Translator: Wesley Oliveira, 2024\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -237,6 +237,7 @@ msgstr "Se marcado, novas mensagens solicitarão sua atenção."
 
 #. module: epa_lab_sample_management
 #: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_has_error
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Se marcado, algumas mensagens tem erro de entrega."
 
@@ -246,6 +247,9 @@ msgid "Is Follower"
 msgstr "É um seguidor"
 
 #. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_fsm_location__is_laboratory
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_fsm_person__is_laboratory
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_hr_employee_dependent__is_laboratory
 #: model:ir.model.fields,field_description:epa_lab_sample_management.field_res_partner__is_laboratory
 #: model:ir.model.fields,field_description:epa_lab_sample_management.field_res_users__is_laboratory
 msgid "Is Laboratory?"
@@ -255,6 +259,12 @@ msgstr "É Laboratório?"
 #: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__is_pending
 msgid "Is Pending?"
 msgstr "Possui Pendência?"
+
+#. module: epa_lab_sample_management
+#: code:addons/epa_lab_sample_management/models/lab_sample.py:0
+#, python-format
+msgid "Just administrators can change the followers."
+msgstr "Somente administradores podem alterar os seguidores."
 
 #. module: epa_lab_sample_management
 #: model:ir.model,name:epa_lab_sample_management.model_lab_matrix
@@ -358,9 +368,19 @@ msgid "Matrix"
 msgstr "Matriz"
 
 #. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_content
+msgid "Message Content"
+msgstr "Conteúdo da Mensagem"
+
+#. module: epa_lab_sample_management
 #: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_has_error
 msgid "Message Delivery error"
 msgstr "Erro na entrega da Mensagem"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,help:epa_lab_sample_management.field_lab_sample__message_content
+msgid "Message content, to be used only in searches"
+msgstr "Conteúdo da mensagem para ser usado apenas nas buscas"
 
 #. module: epa_lab_sample_management
 #: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_ids
@@ -523,6 +543,11 @@ msgstr "Voltar para Rascunho"
 #: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__activity_user_id
 msgid "Responsible User"
 msgstr "Usuário Responsável"
+
+#. module: epa_lab_sample_management
+#: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erro de Envio de SMS"
 
 #. module: epa_lab_sample_management
 #: model:ir.model.fields,field_description:epa_lab_sample_management.field_lab_sample__number
