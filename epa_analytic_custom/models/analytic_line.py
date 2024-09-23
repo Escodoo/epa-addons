@@ -19,12 +19,15 @@ class AccountAnalyticLine(models.Model):
 
     def _can_edit_line(self, vals=None):
         self.ensure_one()
-        if (self.move_id or "move_id" in vals) and not self.user_has_groups(
-            "epa_analytic_custom.group_allow_edit_analytic_line"
+        if (
+            self.move_id
+            and self.move_id.payment_line_ids
+            and not self.user_has_groups(
+                "epa_analytic_custom.group_allow_edit_analytic_line"
+            )
         ):
             return False
-        else:
-            return True
+        return True
 
     def write(self, vals):
         for record in self:
