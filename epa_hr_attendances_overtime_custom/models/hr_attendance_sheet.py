@@ -6,7 +6,7 @@ from datetime import datetime, time, timedelta
 import pytz
 from pytz import timezone
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class HrAttendanceSheet(models.Model):
@@ -18,6 +18,11 @@ class HrAttendanceSheet(models.Model):
         "hr.attendance", string="HR Attendance", compute="_compute_attendances"
     )
     total_overtime_real = fields.Float("Total Overtime (Real)")
+    total_sundays_holidays = fields.Float(
+        string="Sundays and Holidays",
+        compute="_compute_total_sundays_holidays",
+        readonly=True,
+    )
 
     def _compute_attendances(self):
         for line in self:
@@ -201,6 +206,20 @@ class HrAttendanceSheet(models.Model):
             "epa_hr_attendances_overtime_custom.action_report_hr_attendance_sheet"
         ).report_action(self, data=datas)
 
+    @api.depends("attendance_sheet_ids")
+    def _compute_total_sundays_holidays(self):
+        for sheet in self:
+            resource_calendar_id = sheet.employee_id.resource_calendar_id
+            global_leaves_ids = resource_calendar_id.global_leave_ids
+            holidays = global_leaves_ids.mapped("date_from")
+            holiday_dates = {holiday.date() for holiday in holidays}
+            sundays_holidays = sheet.attendance_sheet_ids.filtered(
+                lambda x: x.day == "Sunday" or x.date in holiday_dates
+            )
+            sheet.total_sundays_holidays = sum(
+                sundays_holidays.mapped("total_attendance")
+            )
+
 
 class HrAttendanceSheetLine(models.Model):
     """Attendance Sheet Line."""
@@ -208,3 +227,44 @@ class HrAttendanceSheetLine(models.Model):
     _inherit = "hr.attendance.sheet.line"
 
     total_planned_attendance = fields.Float(string="Total Planned Attendance")
+    attendance_ids = fields.One2many(
+        "hr.attendance", string="HR Attendance", compute="_compute_attendances"
+    )
+    fsignout = fields.Float(
+        string="First Signout",
+        compute="_compute_lunch",
+        readonly=True,
+    )
+    lsignin = fields.Float(
+        string="Last Signin",
+        compute="_compute_lunch",
+        readonly=True,
+    )
+
+    @api.depends("name_id")
+    def _compute_attendances(self):
+        for line in self:
+            line.attendance_ids = line.name_id.attendance_ids.filtered(
+                lambda x: x.check_in.date() == line.date
+            )
+
+    @api.depends("attendance_ids")
+    def _compute_lunch(self):
+        for line in self:
+            if len(line.attendance_ids) < 2:
+                line.fsignout = 0.0
+                line.lsignin = 0.0
+            else:
+
+                def datetime_to_float(dt, employee):
+                    tz = employee.resource_calendar_id.tz
+                    dt_tz = dt.astimezone(timezone(tz))
+                    return dt_tz.hour + (dt_tz.minute * 100 / 60) / 100.0
+
+                first_signout = line.attendance_ids[0].check_out
+                last_index = len(line.attendance_ids) - 1
+                last_signin = line.attendance_ids[last_index].check_in
+
+                employee_id = line.name_id.employee_id
+                line.fsignout = datetime_to_float(first_signout, employee_id)
+                line.lsignin = datetime_to_float(last_signin, employee_id)
