@@ -13,7 +13,6 @@
         "security/ir.model.access.csv",
         "views/crm_stage.xml",
         "views/crm_lead.xml",
-        "views/sale_views.xml",
         "wizard/crm_lead_analytic_account_wizard.xml",
     ],
 }

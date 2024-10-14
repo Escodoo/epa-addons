@@ -68,9 +68,9 @@ class CrmLead(models.Model):
         return super().create(vals)
 
     def write(self, vals):
-        res = super(CrmLead, self).write(vals)
-        if "stage_id" in vals:
-            for lead in self:
+        res = super().write(vals)
+        for lead in self:
+            if "stage_id" in vals:
                 new_stage = self.env["crm.stage"].browse(vals["stage_id"])
                 if new_stage.validate_criteria_fields:
                     criteria_fields = [
@@ -105,8 +105,7 @@ class CrmLead(models.Model):
                                 "\n".join(missing_fields),
                             )
                         )
-        if "alias_name" in vals:
-            for lead in self:
+            if "alias_name" in vals:
                 if lead.name:
                     lead.name = f"{lead.name.split(' | ')[0]} | {vals['alias_name']}"
         return res
