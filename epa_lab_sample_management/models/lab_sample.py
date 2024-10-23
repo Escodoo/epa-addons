@@ -136,7 +136,7 @@ class LabSample(models.Model):
 
         return record
 
-    @api.depends("number", "company_id", "point", "depth", "collection_date")
+    @api.depends("number", "company_id", "point", "collection_date")
     def _compute_name(self):
         for sample in self:
             if (
@@ -147,14 +147,10 @@ class LabSample(models.Model):
                 and sample.collection_date
             ):
                 point = sample.point
-                depth = sample.depth
                 year = sample.collection_date.strftime("%y")
                 company_name = sample.company_id.name.split(" ")[0].upper()
                 number = sample.number
-                if depth:
-                    sample.name = f"{point}/{depth}/{year}/{company_name}/{number}"
-                else:
-                    sample.name = f"{point}/{year}/{company_name}/{number}"
+                sample.name = f"{point}/{year}/{company_name}/{number}"
 
     def action_confirm(self):
         for sample in self:
