@@ -1,0 +1,2 @@
+- Open a non-conformity record
+- Click on Print > Non-Conformity Report
