@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="hr_attendance_sheet_search_view">
+        <field
+            name="name"
+        >hr.attendance.sheet.search.view (in epa_hr_attendances_overtime_tier_validation)</field>
+        <field name="model">hr.attendance.sheet</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id" />
+                <filter
+                    name="needs_review"
+                    string="Needs my Review"
+                    domain="[('reviewer_ids','in',uid), ('state', 'not in', ['draft', 'approved'])]"
+                    help="My Attendance Sheets to review"
+                />
+                <filter
+                    name="tier_validated"
+                    string="Validated"
+                    domain="[('validated', '=', True)]"
+                    help="Attendance Sheets validated and ready to be confirmed"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_attendance_sheets_tree_view" model="ir.ui.view">
+        <field
+            name="name"
+        >hr.attendance.sheets.tree.view (in epa_hr_attendances_overtime_tier_validation)</field>
+        <field name="model">hr.attendance.sheet</field>
+        <field
+            name="inherit_id"
+            ref="hr_attendances_overtime.hr_attendance_sheets_tree_view"
+        />
+        <field name="arch" type="xml">
+            <tree position="inside">
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-info="state == 'confirm'"
+                    decoration-success="state == 'approved'"
+                />
+                <field
+                    name="validation_status"
+                    widget="badge"
+                    decoration-info="validation_status == 'pending'"
+                    decoration-danger="validation_status == 'rejected'"
+                    decoration-success="validation_status == 'validated'"
+                />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

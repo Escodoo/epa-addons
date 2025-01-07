@@ -1,0 +1,128 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* epa_hr_attendances_overtime_tier_validation
+#
+# Translators:
+# Wesley Oliveira <wesley.oliveira@escodoo.com.br>, 2024
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-07 08:23+0000\n"
+"PO-Revision-Date: 2025-01-07 08:23+0000\n"
+"Last-Translator: Wesley Oliveira, 2024\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model,name:epa_hr_attendances_overtime_tier_validation.model_hr_attendance_sheet
+msgid "Attendance Sheet"
+msgstr "Folha de Presença"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model_terms:ir.ui.view,arch_db:epa_hr_attendances_overtime_tier_validation.hr_attendance_sheet_search_view
+msgid "Attendance Sheets validated and ready to be confirmed"
+msgstr "Folhas de Presença validadas and prontas para serem aprovadas"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__can_review
+msgid "Can Review"
+msgstr "Pode Revisar"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__display_name
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_tier_definition__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__has_comment
+msgid "Has Comment"
+msgstr "Tem Comentário"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__id
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_tier_definition__id
+msgid "ID"
+msgstr "ID"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet____last_update
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_tier_definition____last_update
+msgid "Last Modified on"
+msgstr "Última modificação em"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model_terms:ir.ui.view,arch_db:epa_hr_attendances_overtime_tier_validation.hr_attendance_sheet_search_view
+msgid "My Attendance Sheets to review"
+msgstr "Minhas Folhas de Presença para revisar"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__need_validation
+msgid "Need Validation"
+msgstr "Necessita Validação"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model_terms:ir.ui.view,arch_db:epa_hr_attendances_overtime_tier_validation.hr_attendance_sheet_search_view
+msgid "Needs my Review"
+msgstr "Necessita minha Revisão"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__next_review
+msgid "Next Review"
+msgstr "Próxima Revisão"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__rejected
+msgid "Rejected"
+msgstr "Rejeitada"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__rejected_message
+msgid "Rejected Message"
+msgstr "Mensagem da Rejeição"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__reviewer_ids
+msgid "Reviewers"
+msgstr "Revisores"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model,name:epa_hr_attendances_overtime_tier_validation.model_tier_definition
+msgid "Tier Definition"
+msgstr "Definição de Nível"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__tier_validation_before_write
+msgid "Tier Validation Before Write"
+msgstr "Validação de Nível Antes da Gravação"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__to_validate_message
+msgid "To Validate Message"
+msgstr "Mensagem para Validar"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__validated
+#: model_terms:ir.ui.view,arch_db:epa_hr_attendances_overtime_tier_validation.hr_attendance_sheet_search_view
+msgid "Validated"
+msgstr "Validado"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__validated_message
+msgid "Validated Message"
+msgstr "Mensagem da Validação"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__validation_status
+msgid "Validation Status"
+msgstr "Status de validação"
+
+#. module: epa_hr_attendances_overtime_tier_validation
+#: model:ir.model.fields,field_description:epa_hr_attendances_overtime_tier_validation.field_hr_attendance_sheet__review_ids
+msgid "Validations"
+msgstr "Validações"
