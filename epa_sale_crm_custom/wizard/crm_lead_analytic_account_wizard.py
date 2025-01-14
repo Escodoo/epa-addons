@@ -43,7 +43,7 @@ class CrmLeadAnalyticAccountWizard(models.TransientModel):
             self.env["project.project"].create(
                 {
                     "name": self.lead_id.alias_name,
-                    "user_id": self.lead_id.team_id.id,
+                    "user_id": self.lead_id.project_manager.user_id.id,
                     "analytic_account_id": analytic_account.id,
                     "partner_id": analytic_account.partner_id.id,
                     "type_id": self.lead_id.type_id.id,
