@@ -90,7 +90,7 @@ msgstr "<strong>Total de Presença (-)</strong>"
 #. module: epa_hr_attendances_overtime_custom
 #: model_terms:ir.ui.view,arch_db:epa_hr_attendances_overtime_custom.report_hr_attendance_sheet
 msgid "<strong>Total Planned Attendance</strong>"
-msgstr "<strong>Horas Úteis no Mês</strong>"
+msgstr "<strong>Horas Úteis no Mês/Total Planejado</strong>"
 
 #. module: epa_hr_attendances_overtime_custom
 #: model_terms:ir.ui.view,arch_db:epa_hr_attendances_overtime_custom.report_hr_attendance_sheet
