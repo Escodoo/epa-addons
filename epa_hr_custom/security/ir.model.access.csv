@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_epa_hr_required_education,access.epa_hr.required.education,model_epa_hr_required_education,hr.group_hr_user,1,1,1,1
+access_epa_hr_required_knowledge,access.epa_hr.required.knowledge,model_epa_hr_required_knowledge,hr.group_hr_user,1,1,1,1
+access_epa_hr_nr_compliance,access.epa_hr.nr.compliance,model_epa_hr_nr_compliance,hr.group_hr_user,1,1,1,1
+access_epa_hr_administrative_procedure,access.epa_hr.administrative.procedure,model_epa_hr_administrative_procedure,hr.group_hr_user,1,1,1,1
+access_epa_hr_management_procedure,access.epa_hr.management.procedure,model_epa_hr_management_procedure,hr.group_hr_user,1,1,1,1
+access_epa_hr_operational_procedure,access.epa_hr.operational.procedure,model_epa_hr_operational_procedure,hr.group_hr_user,1,1,1,1
+access_epa_hr_safety_procedure,access.epa_hr.safety.procedure,model_epa_hr_safety_procedure,hr.group_hr_user,1,1,1,1
+access_epa_hr_technical_procedure,access.epa_hr.technical.procedure,model_epa_hr_technical_procedure,hr.group_hr_user,1,1,1,1
+access_epa_hr_technical_instruction,access.epa_hr.technical.instruction,model_epa_hr_technical_instruction,hr.group_hr_user,1,1,1,1
+access_epa_hr_skills_behavior,access.epa_hr.skills.behavior,model_epa_hr_skills_behavior,hr.group_hr_user,1,1,1,1
