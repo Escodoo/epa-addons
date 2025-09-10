@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <!-- Required Education / Formation -->
+    <record id="epa_hr_required_education_1" model="epa_hr.required.education">
+        <field name="name">Ensino Fundamental</field>
+    </record>
+    <record id="epa_hr_required_education_2" model="epa_hr.required.education">
+        <field name="name">Ensino Médio</field>
+    </record>
+    <record id="epa_hr_required_education_3" model="epa_hr.required.education">
+        <field name="name">Ensino Profissionalizante</field>
+    </record>
+    <record id="epa_hr_required_education_4" model="epa_hr.required.education">
+        <field name="name">Curso Técnico</field>
+    </record>
+    <record id="epa_hr_required_education_5" model="epa_hr.required.education">
+        <field name="name">Tecnologia</field>
+    </record>
+    <record id="epa_hr_required_education_6" model="epa_hr.required.education">
+        <field name="name">Ensino Superior Cursando</field>
+    </record>
+    <record id="epa_hr_required_education_7" model="epa_hr.required.education">
+        <field name="name">Ensino Superior Completo</field>
+    </record>
+    <record id="epa_hr_required_education_8" model="epa_hr.required.education">
+        <field name="name">Ensino Superior / Mestrado</field>
+    </record>
+    <record id="epa_hr_required_education_9" model="epa_hr.required.education">
+        <field name="name">Ensino Superior / Doutorado</field>
+    </record>
+    <record id="epa_hr_required_education_10" model="epa_hr.required.education">
+        <field
+            name="name"
+        >Ensino Superior / Pós Graduação / Especialização Técnica</field>
+    </record>
+    <record id="epa_hr_required_education_11" model="epa_hr.required.education">
+        <field
+            name="name"
+        >Ensino Superior / Pós Graduação / Especialização Administrativa</field>
+    </record>
+
+    <!-- Required Knowledge -->
+    <record id="epa_hr_required_knowledge_1" model="epa_hr.required.knowledge">
+        <field name="name">Amostragem de Solo</field>
+    </record>
+    <record id="epa_hr_required_knowledge_2" model="epa_hr.required.knowledge">
+        <field name="name">Amostragem de Água Superficial e Subterrânea</field>
+    </record>
+    <record id="epa_hr_required_knowledge_3" model="epa_hr.required.knowledge">
+        <field name="name">Amostragem de Efluentes</field>
+    </record>
+    <record id="epa_hr_required_knowledge_4" model="epa_hr.required.knowledge">
+        <field name="name">Realização de Sondagem Manual</field>
+    </record>
+    <record id="epa_hr_required_knowledge_5" model="epa_hr.required.knowledge">
+        <field name="name">Realização de Sondagem Mecanizada</field>
+    </record>
+    <record id="epa_hr_required_knowledge_6" model="epa_hr.required.knowledge">
+        <field name="name">Instalação de Poços de Monitoramento</field>
+    </record>
+    <record id="epa_hr_required_knowledge_7" model="epa_hr.required.knowledge">
+        <field name="name">Condução de Veículos Leves</field>
+    </record>
+    <record id="epa_hr_required_knowledge_8" model="epa_hr.required.knowledge">
+        <field name="name">Condução de Veículos Pesados</field>
+    </record>
+    <record id="epa_hr_required_knowledge_9" model="epa_hr.required.knowledge">
+        <field name="name">Operação de Sistema de Tratamento</field>
+    </record>
+    <record id="epa_hr_required_knowledge_10" model="epa_hr.required.knowledge">
+        <field name="name">Operação de Sistema de Remediação</field>
+    </record>
+    <record id="epa_hr_required_knowledge_11" model="epa_hr.required.knowledge">
+        <field name="name">Conhecimento em Rotinas Administrativas Financeiras</field>
+    </record>
+    <record id="epa_hr_required_knowledge_12" model="epa_hr.required.knowledge">
+        <field
+            name="name"
+        >Conhecimento em Rotinas Adminitrativas de Recursos Humanos e Departamento Pessoal</field>
+    </record>
+    <record id="epa_hr_required_knowledge_13" model="epa_hr.required.knowledge">
+        <field
+            name="name"
+        >Conhecimento em Rotinas Administrativas de Compras e Suprimentos</field>
+    </record>
+
+    <!-- NR Compliance -->
+    <record id="epa_hr_nr_compliance_1" model="epa_hr.nr.compliance">
+        <field name="name">Amostragem de Água Subterrânea</field>
+    </record>
+    <record id="epa_hr_nr_compliance_2" model="epa_hr.nr.compliance">
+        <field name="name">Análise de Riscos da Tarefa (ART)</field>
+    </record>
+    <record id="epa_hr_nr_compliance_3" model="epa_hr.nr.compliance">
+        <field name="name">Análise Preliminar de Riscos - APR</field>
+    </record>
+    <record id="epa_hr_nr_compliance_4" model="epa_hr.nr.compliance">
+        <field name="name">Auditor Interno</field>
+    </record>
+    <record id="epa_hr_nr_compliance_5" model="epa_hr.nr.compliance">
+        <field name="name">Brigada de Incêndio</field>
+    </record>
+    <record id="epa_hr_nr_compliance_6" model="epa_hr.nr.compliance">
+        <field name="name">Cálculo de Inserteza de Mediação</field>
+    </record>
+    <record id="epa_hr_nr_compliance_7" model="epa_hr.nr.compliance">
+        <field name="name">CIPA - Comissão Interna de Prevensão de Acidentes</field>
+    </record>
+    <record id="epa_hr_nr_compliance_8" model="epa_hr.nr.compliance">
+        <field name="name">Direção Defensiva</field>
+    </record>
+    <record id="epa_hr_nr_compliance_9" model="epa_hr.nr.compliance">
+        <field
+            name="name"
+        >Equipamentos de Instrumentação de Medicação aplicados a sua Área de Atuação</field>
+    </record>
+    <record id="epa_hr_nr_compliance_10" model="epa_hr.nr.compliance">
+        <field name="name">Ferramentas de SSO (PGR, PCMSO, PCA, PPR, PCMAT, ...)</field>
+    </record>
+    <record id="epa_hr_nr_compliance_11" model="epa_hr.nr.compliance">
+        <field name="name">Primeiros Socorros</field>
+    </record>
+    <record id="epa_hr_nr_compliance_12" model="epa_hr.nr.compliance">
+        <field name="name">Procedimentos Internos ABNT NBR ISI IEC 17025</field>
+    </record>
+    <record id="epa_hr_nr_compliance_13" model="epa_hr.nr.compliance">
+        <field name="name">Utilização de Veículos Automotores</field>
+    </record>
+    <record id="epa_hr_nr_compliance_14" model="epa_hr.nr.compliance">
+        <field name="name">Utilização e Conservação de EPI</field>
+    </record>
+
+    <!-- Administrative Procedure -->
+    <record
+        id="epa_hr_administrative_procedure_1"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-001</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_2"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-002</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_3"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-003</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_4"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-004</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_5"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-005</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_6"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-006</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_7"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-007</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_8"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-008</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_9"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-009</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_10"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-010</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_11"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-011</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_12"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-012</field>
+    </record>
+    <record
+        id="epa_hr_administrative_procedure_13"
+        model="epa_hr.administrative.procedure"
+    >
+        <field name="name">PA-013</field>
+    </record>
+
+    <!-- Management Procedure -->
+    <record id="epa_hr_management_procedure_1" model="epa_hr.management.procedure">
+        <field name="name">PG-001</field>
+    </record>
+    <record id="epa_hr_management_procedure_2" model="epa_hr.management.procedure">
+        <field name="name">PG-002</field>
+    </record>
+    <record id="epa_hr_management_procedure_3" model="epa_hr.management.procedure">
+        <field name="name">PG-003</field>
+    </record>
+    <record id="epa_hr_management_procedure_4" model="epa_hr.management.procedure">
+        <field name="name">PG-004</field>
+    </record>
+    <record id="epa_hr_management_procedure_5" model="epa_hr.management.procedure">
+        <field name="name">PG-005</field>
+    </record>
+    <record id="epa_hr_management_procedure_6" model="epa_hr.management.procedure">
+        <field name="name">PG-006</field>
+    </record>
+    <record id="epa_hr_management_procedure_7" model="epa_hr.management.procedure">
+        <field name="name">PG-007</field>
+    </record>
+    <record id="epa_hr_management_procedure_8" model="epa_hr.management.procedure">
+        <field name="name">PG-008</field>
+    </record>
+    <record id="epa_hr_management_procedure_9" model="epa_hr.management.procedure">
+        <field name="name">PG-009</field>
+    </record>
+    <record id="epa_hr_management_procedure_10" model="epa_hr.management.procedure">
+        <field name="name">PG-010</field>
+    </record>
+    <record id="epa_hr_management_procedure_11" model="epa_hr.management.procedure">
+        <field name="name">PG-011</field>
+    </record>
+    <record id="epa_hr_management_procedure_12" model="epa_hr.management.procedure">
+        <field name="name">PG-012</field>
+    </record>
+    <record id="epa_hr_management_procedure_13" model="epa_hr.management.procedure">
+        <field name="name">PG-013</field>
+    </record>
+    <record id="epa_hr_management_procedure_14" model="epa_hr.management.procedure">
+        <field name="name">PG-014</field>
+    </record>
+    <record id="epa_hr_management_procedure_15" model="epa_hr.management.procedure">
+        <field name="name">PG-015</field>
+    </record>
+    <record id="epa_hr_management_procedure_16" model="epa_hr.management.procedure">
+        <field name="name">PG-016</field>
+    </record>
+    <record id="epa_hr_management_procedure_17" model="epa_hr.management.procedure">
+        <field name="name">PG-017</field>
+    </record>
+    <record id="epa_hr_management_procedure_18" model="epa_hr.management.procedure">
+        <field name="name">PG-018</field>
+    </record>
+    <record id="epa_hr_management_procedure_19" model="epa_hr.management.procedure">
+        <field name="name">PG-019</field>
+    </record>
+    <record id="epa_hr_management_procedure_20" model="epa_hr.management.procedure">
+        <field name="name">PG-020</field>
+    </record>
+    <record id="epa_hr_management_procedure_21" model="epa_hr.management.procedure">
+        <field name="name">PG-021</field>
+    </record>
+    <record id="epa_hr_management_procedure_22" model="epa_hr.management.procedure">
+        <field name="name">PG-022</field>
+    </record>
+    <record id="epa_hr_management_procedure_23" model="epa_hr.management.procedure">
+        <field name="name">PG-023</field>
+    </record>
+    <record id="epa_hr_management_procedure_24" model="epa_hr.management.procedure">
+        <field name="name">PG-024</field>
+    </record>
+    <record id="epa_hr_management_procedure_25" model="epa_hr.management.procedure">
+        <field name="name">PG-025</field>
+    </record>
+    <record id="epa_hr_management_procedure_26" model="epa_hr.management.procedure">
+        <field name="name">PG-026</field>
+    </record>
+    <record id="epa_hr_management_procedure_27" model="epa_hr.management.procedure">
+        <field name="name">PG-027</field>
+    </record>
+
+    <!-- Operational Procedure -->
+    <record id="epa_hr_operational_procedure_1" model="epa_hr.operational.procedure">
+        <field name="name">PO-001</field>
+    </record>
+    <record id="epa_hr_operational_procedure_2" model="epa_hr.operational.procedure">
+        <field name="name">PO-002</field>
+    </record>
+    <record id="epa_hr_operational_procedure_3" model="epa_hr.operational.procedure">
+        <field name="name">PO-003</field>
+    </record>
+    <record id="epa_hr_operational_procedure_4" model="epa_hr.operational.procedure">
+        <field name="name">PO-004</field>
+    </record>
+    <record id="epa_hr_operational_procedure_5" model="epa_hr.operational.procedure">
+        <field name="name">PO-005</field>
+    </record>
+    <record id="epa_hr_operational_procedure_6" model="epa_hr.operational.procedure">
+        <field name="name">PO-006</field>
+    </record>
+    <record id="epa_hr_operational_procedure_7" model="epa_hr.operational.procedure">
+        <field name="name">PO-007</field>
+    </record>
+    <record id="epa_hr_operational_procedure_8" model="epa_hr.operational.procedure">
+        <field name="name">PO-008</field>
+    </record>
+    <record id="epa_hr_operational_procedure_9" model="epa_hr.operational.procedure">
+        <field name="name">PO-009</field>
+    </record>
+    <record id="epa_hr_operational_procedure_10" model="epa_hr.operational.procedure">
+        <field name="name">PO-010</field>
+    </record>
+    <record id="epa_hr_operational_procedure_11" model="epa_hr.operational.procedure">
+        <field name="name">PO-011</field>
+    </record>
+    <record id="epa_hr_operational_procedure_12" model="epa_hr.operational.procedure">
+        <field name="name">PO-012</field>
+    </record>
+    <record id="epa_hr_operational_procedure_13" model="epa_hr.operational.procedure">
+        <field name="name">PO-013</field>
+    </record>
+    <record id="epa_hr_operational_procedure_14" model="epa_hr.operational.procedure">
+        <field name="name">PO-014</field>
+    </record>
+    <record id="epa_hr_operational_procedure_15" model="epa_hr.operational.procedure">
+        <field name="name">PO-015</field>
+    </record>
+    <record id="epa_hr_operational_procedure_16" model="epa_hr.operational.procedure">
+        <field name="name">PO-016</field>
+    </record>
+    <record id="epa_hr_operational_procedure_17" model="epa_hr.operational.procedure">
+        <field name="name">PO-017</field>
+    </record>
+    <record id="epa_hr_operational_procedure_18" model="epa_hr.operational.procedure">
+        <field name="name">PO-018</field>
+    </record>
+    <record id="epa_hr_operational_procedure_19" model="epa_hr.operational.procedure">
+        <field name="name">PO-019</field>
+    </record>
+    <record id="epa_hr_operational_procedure_20" model="epa_hr.operational.procedure">
+        <field name="name">PO-020</field>
+    </record>
+    <record id="epa_hr_operational_procedure_21" model="epa_hr.operational.procedure">
+        <field name="name">PO-021</field>
+    </record>
+    <record id="epa_hr_operational_procedure_22" model="epa_hr.operational.procedure">
+        <field name="name">PO-022</field>
+    </record>
+    <record id="epa_hr_operational_procedure_23" model="epa_hr.operational.procedure">
+        <field name="name">PO-023</field>
+    </record>
+    <record id="epa_hr_operational_procedure_24" model="epa_hr.operational.procedure">
+        <field name="name">PO-024</field>
+    </record>
+    <record id="epa_hr_operational_procedure_25" model="epa_hr.operational.procedure">
+        <field name="name">PO-025</field>
+    </record>
+    <record id="epa_hr_operational_procedure_26" model="epa_hr.operational.procedure">
+        <field name="name">PO-026</field>
+    </record>
+    <record id="epa_hr_operational_procedure_27" model="epa_hr.operational.procedure">
+        <field name="name">PO-027</field>
+    </record>
+    <record id="epa_hr_operational_procedure_28" model="epa_hr.operational.procedure">
+        <field name="name">PO-028</field>
+    </record>
+    <record id="epa_hr_operational_procedure_29" model="epa_hr.operational.procedure">
+        <field name="name">PO-029</field>
+    </record>
+    <record id="epa_hr_operational_procedure_30" model="epa_hr.operational.procedure">
+        <field name="name">PO-030</field>
+    </record>
+
+    <!-- Safety Procedure -->
+    <record id="epa_hr_safety_procedure_1" model="epa_hr.safety.procedure">
+        <field name="name">PS-001</field>
+    </record>
+    <record id="epa_hr_safety_procedure_2" model="epa_hr.safety.procedure">
+        <field name="name">PS-002</field>
+    </record>
+    <record id="epa_hr_safety_procedure_3" model="epa_hr.safety.procedure">
+        <field name="name">PS-003</field>
+    </record>
+    <record id="epa_hr_safety_procedure_4" model="epa_hr.safety.procedure">
+        <field name="name">PS-004</field>
+    </record>
+    <record id="epa_hr_safety_procedure_5" model="epa_hr.safety.procedure">
+        <field name="name">PS-005</field>
+    </record>
+    <record id="epa_hr_safety_procedure_6" model="epa_hr.safety.procedure">
+        <field name="name">PS-006</field>
+    </record>
+    <record id="epa_hr_safety_procedure_7" model="epa_hr.safety.procedure">
+        <field name="name">PS-007</field>
+    </record>
+    <record id="epa_hr_safety_procedure_8" model="epa_hr.safety.procedure">
+        <field name="name">PS-008</field>
+    </record>
+    <record id="epa_hr_safety_procedure_9" model="epa_hr.safety.procedure">
+        <field name="name">PS-009</field>
+    </record>
+    <record id="epa_hr_safety_procedure_10" model="epa_hr.safety.procedure">
+        <field name="name">PS-010</field>
+    </record>
+    <record id="epa_hr_safety_procedure_11" model="epa_hr.safety.procedure">
+        <field name="name">PS-011</field>
+    </record>
+    <record id="epa_hr_safety_procedure_12" model="epa_hr.safety.procedure">
+        <field name="name">PS-012</field>
+    </record>
+    <record id="epa_hr_safety_procedure_13" model="epa_hr.safety.procedure">
+        <field name="name">PS-013</field>
+    </record>
+    <record id="epa_hr_safety_procedure_14" model="epa_hr.safety.procedure">
+        <field name="name">PS-014</field>
+    </record>
+    <record id="epa_hr_safety_procedure_15" model="epa_hr.safety.procedure">
+        <field name="name">PS-015</field>
+    </record>
+    <record id="epa_hr_safety_procedure_16" model="epa_hr.safety.procedure">
+        <field name="name">PS-016</field>
+    </record>
+    <record id="epa_hr_safety_procedure_17" model="epa_hr.safety.procedure">
+        <field name="name">PS-017</field>
+    </record>
+    <record id="epa_hr_safety_procedure_18" model="epa_hr.safety.procedure">
+        <field name="name">PS-018</field>
+    </record>
+    <record id="epa_hr_safety_procedure_19" model="epa_hr.safety.procedure">
+        <field name="name">PS-019</field>
+    </record>
+
+    <!-- Technical Procedure -->
+    <record id="epa_hr_technical_procedure_1" model="epa_hr.technical.procedure">
+        <field name="name">PT-001</field>
+    </record>
+    <record id="epa_hr_technical_procedure_2" model="epa_hr.technical.procedure">
+        <field name="name">PT-002</field>
+    </record>
+    <record id="epa_hr_technical_procedure_3" model="epa_hr.technical.procedure">
+        <field name="name">PT-003</field>
+    </record>
+    <record id="epa_hr_technical_procedure_4" model="epa_hr.technical.procedure">
+        <field name="name">PT-004</field>
+    </record>
+    <record id="epa_hr_technical_procedure_5" model="epa_hr.technical.procedure">
+        <field name="name">PT-005</field>
+    </record>
+    <record id="epa_hr_technical_procedure_6" model="epa_hr.technical.procedure">
+        <field name="name">PT-006</field>
+    </record>
+    <record id="epa_hr_technical_procedure_7" model="epa_hr.technical.procedure">
+        <field name="name">PT-007</field>
+    </record>
+    <record id="epa_hr_technical_procedure_8" model="epa_hr.technical.procedure">
+        <field name="name">PT-008</field>
+    </record>
+    <record id="epa_hr_technical_procedure_9" model="epa_hr.technical.procedure">
+        <field name="name">PT-009</field>
+    </record>
+    <record id="epa_hr_technical_procedure_10" model="epa_hr.technical.procedure">
+        <field name="name">PT-010</field>
+    </record>
+    <record id="epa_hr_technical_procedure_11" model="epa_hr.technical.procedure">
+        <field name="name">PT-011</field>
+    </record>
+    <record id="epa_hr_technical_procedure_12" model="epa_hr.technical.procedure">
+        <field name="name">PT-012</field>
+    </record>
+    <record id="epa_hr_technical_procedure_13" model="epa_hr.technical.procedure">
+        <field name="name">PT-013</field>
+    </record>
+    <record id="epa_hr_technical_procedure_14" model="epa_hr.technical.procedure">
+        <field name="name">PT-014</field>
+    </record>
+    <record id="epa_hr_technical_procedure_15" model="epa_hr.technical.procedure">
+        <field name="name">PT-015</field>
+    </record>
+
+    <!-- Technical Instruction -->
+    <record id="epa_hr_technical_instruction_1" model="epa_hr.technical.instruction">
+        <field name="name">IT-001</field>
+    </record>
+    <record id="epa_hr_technical_instruction_2" model="epa_hr.technical.instruction">
+        <field name="name">IT-002</field>
+    </record>
+    <record id="epa_hr_technical_instruction_3" model="epa_hr.technical.instruction">
+        <field name="name">IT-003</field>
+    </record>
+    <record id="epa_hr_technical_instruction_4" model="epa_hr.technical.instruction">
+        <field name="name">IT-004</field>
+    </record>
+    <record id="epa_hr_technical_instruction_5" model="epa_hr.technical.instruction">
+        <field name="name">IT-005</field>
+    </record>
+    <record id="epa_hr_technical_instruction_6" model="epa_hr.technical.instruction">
+        <field name="name">IT-006</field>
+    </record>
+    <record id="epa_hr_technical_instruction_7" model="epa_hr.technical.instruction">
+        <field name="name">IT-007</field>
+    </record>
+    <record id="epa_hr_technical_instruction_8" model="epa_hr.technical.instruction">
+        <field name="name">IT-008</field>
+    </record>
+    <record id="epa_hr_technical_instruction_9" model="epa_hr.technical.instruction">
+        <field name="name">IT-009</field>
+    </record>
+    <record id="epa_hr_technical_instruction_10" model="epa_hr.technical.instruction">
+        <field name="name">IT-010</field>
+    </record>
+    <record id="epa_hr_technical_instruction_11" model="epa_hr.technical.instruction">
+        <field name="name">IT-011</field>
+    </record>
+    <record id="epa_hr_technical_instruction_12" model="epa_hr.technical.instruction">
+        <field name="name">IT-012</field>
+    </record>
+    <record id="epa_hr_technical_instruction_13" model="epa_hr.technical.instruction">
+        <field name="name">IT-013</field>
+    </record>
+    <record id="epa_hr_technical_instruction_14" model="epa_hr.technical.instruction">
+        <field name="name">IT-014</field>
+    </record>
+    <record id="epa_hr_technical_instruction_15" model="epa_hr.technical.instruction">
+        <field name="name">IT-015</field>
+    </record>
+    <record id="epa_hr_technical_instruction_16" model="epa_hr.technical.instruction">
+        <field name="name">IT-016</field>
+    </record>
+    <record id="epa_hr_technical_instruction_17" model="epa_hr.technical.instruction">
+        <field name="name">IT-017</field>
+    </record>
+    <record id="epa_hr_technical_instruction_18" model="epa_hr.technical.instruction">
+        <field name="name">IT-018</field>
+    </record>
+    <record id="epa_hr_technical_instruction_19" model="epa_hr.technical.instruction">
+        <field name="name">IT-019</field>
+    </record>
+    <record id="epa_hr_technical_instruction_20" model="epa_hr.technical.instruction">
+        <field name="name">IT-020</field>
+    </record>
+    <record id="epa_hr_technical_instruction_21" model="epa_hr.technical.instruction">
+        <field name="name">IT-021</field>
+    </record>
+    <record id="epa_hr_technical_instruction_22" model="epa_hr.technical.instruction">
+        <field name="name">IT-022</field>
+    </record>
+    <record id="epa_hr_technical_instruction_23" model="epa_hr.technical.instruction">
+        <field name="name">IT-023</field>
+    </record>
+    <record id="epa_hr_technical_instruction_24" model="epa_hr.technical.instruction">
+        <field name="name">IT-024</field>
+    </record>
+    <record id="epa_hr_technical_instruction_25" model="epa_hr.technical.instruction">
+        <field name="name">IT-025</field>
+    </record>
+    <record id="epa_hr_technical_instruction_26" model="epa_hr.technical.instruction">
+        <field name="name">IT-026</field>
+    </record>
+    <record id="epa_hr_technical_instruction_27" model="epa_hr.technical.instruction">
+        <field name="name">IT-027</field>
+    </record>
+    <record id="epa_hr_technical_instruction_28" model="epa_hr.technical.instruction">
+        <field name="name">IT-028</field>
+    </record>
+    <record id="epa_hr_technical_instruction_29" model="epa_hr.technical.instruction">
+        <field name="name">IT-029</field>
+    </record>
+    <record id="epa_hr_technical_instruction_30" model="epa_hr.technical.instruction">
+        <field name="name">IT-030</field>
+    </record>
+    <record id="epa_hr_technical_instruction_31" model="epa_hr.technical.instruction">
+        <field name="name">IT-031</field>
+    </record>
+    <record id="epa_hr_technical_instruction_32" model="epa_hr.technical.instruction">
+        <field name="name">IT-032</field>
+    </record>
+    <record id="epa_hr_technical_instruction_33" model="epa_hr.technical.instruction">
+        <field name="name">IT-033</field>
+    </record>
+    <record id="epa_hr_technical_instruction_34" model="epa_hr.technical.instruction">
+        <field name="name">IT-034</field>
+    </record>
+    <record id="epa_hr_technical_instruction_35" model="epa_hr.technical.instruction">
+        <field name="name">IT-035</field>
+    </record>
+    <record id="epa_hr_technical_instruction_36" model="epa_hr.technical.instruction">
+        <field name="name">IT-036</field>
+    </record>
+    <record id="epa_hr_technical_instruction_37" model="epa_hr.technical.instruction">
+        <field name="name">IT-037</field>
+    </record>
+
+    <!-- Skills / Behavior -->
+    <record id="epa_hr_skills_behavior_1" model="epa_hr.skills.behavior">
+        <field name="name">Assiduidade</field>
+    </record>
+    <record id="epa_hr_skills_behavior_2" model="epa_hr.skills.behavior">
+        <field name="name">Autodesenvolvimento</field>
+    </record>
+    <record id="epa_hr_skills_behavior_3" model="epa_hr.skills.behavior">
+        <field name="name">Capacidade de Gerenciamento de Pessoas</field>
+    </record>
+    <record id="epa_hr_skills_behavior_4" model="epa_hr.skills.behavior">
+        <field name="name">Concentração</field>
+    </record>
+    <record id="epa_hr_skills_behavior_5" model="epa_hr.skills.behavior">
+        <field name="name">Espírito de Equipe</field>
+    </record>
+    <record id="epa_hr_skills_behavior_6" model="epa_hr.skills.behavior">
+        <field name="name">Disciplina Profissional</field>
+    </record>
+    <record id="epa_hr_skills_behavior_7" model="epa_hr.skills.behavior">
+        <field name="name">Flexibilidade</field>
+    </record>
+    <record id="epa_hr_skills_behavior_8" model="epa_hr.skills.behavior">
+        <field name="name">Melhoria Contínua</field>
+    </record>
+    <record id="epa_hr_skills_behavior_9" model="epa_hr.skills.behavior">
+        <field name="name">Organização</field>
+    </record>
+    <record id="epa_hr_skills_behavior_10" model="epa_hr.skills.behavior">
+        <field name="name">Boa Redação na Língua Portuguesa</field>
+    </record>
+    <record id="epa_hr_skills_behavior_11" model="epa_hr.skills.behavior">
+        <field name="name">Comprometimento</field>
+    </record>
+    <record id="epa_hr_skills_behavior_12" model="epa_hr.skills.behavior">
+        <field name="name">Comunicação</field>
+    </record>
+    <record id="epa_hr_skills_behavior_13" model="epa_hr.skills.behavior">
+        <field name="name">Planejamento</field>
+    </record>
+    <record id="epa_hr_skills_behavior_14" model="epa_hr.skills.behavior">
+        <field name="name">Proatividade</field>
+    </record>
+    <record id="epa_hr_skills_behavior_15" model="epa_hr.skills.behavior">
+        <field name="name">Relacionamento Interpessoal</field>
+    </record>
+    <record id="epa_hr_skills_behavior_16" model="epa_hr.skills.behavior">
+        <field name="name">Sigilo Profissional</field>
+    </record>
+    <record id="epa_hr_skills_behavior_17" model="epa_hr.skills.behavior">
+        <field name="name">Solução de Problemas</field>
+    </record>
+
+</odoo>

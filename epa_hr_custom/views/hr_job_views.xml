@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_hr_job_form" model="ir.ui.view">
+        <field name="name">hr.job.form (in epa_hr_custom)</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Job Info">
+                    <group>
+                        <group
+                            name="required_education_formation"
+                            string="Required Education / Formation"
+                        >
+                            <field
+                                name="epa_required_education_formation"
+                                widget="many2many_tags"
+                            />
+                        </group>
+                        <group name="required_knowledge" string="Required Knowledge">
+                            <field
+                                name="epa_required_knowledge"
+                                widget="many2many_tags"
+                            />
+                        </group>
+                    </group>
+                    <group>
+                        <group
+                            name="required_internal_training"
+                            string="Required Internal Training"
+                        >
+                            <field name="epa_nr_compliance" widget="many2many_tags" />
+                            <field
+                                name="epa_administrative_procedure"
+                                widget="many2many_tags"
+                            />
+                            <field
+                                name="epa_management_procedure"
+                                widget="many2many_tags"
+                            />
+                            <field
+                                name="epa_operational_procedure"
+                                widget="many2many_tags"
+                            />
+                            <field
+                                name="epa_safety_procedure"
+                                widget="many2many_tags"
+                            />
+                            <field
+                                name="epa_technical_procedure"
+                                widget="many2many_tags"
+                            />
+                            <field
+                                name="epa_technical_instruction"
+                                widget="many2many_tags"
+                            />
+                        </group>
+                        <div>
+                            <group name="skills_behavior" string="Skills / Behavior">
+                                <field
+                                    name="epa_skills_behavior"
+                                    widget="many2many_tags"
+                                />
+                            </group>
+                            <group name="salary" string="Salary">
+                                <label for="epa_salary" />
+                                <div class="d-flex">
+                                    <field name="epa_salary_currency" />
+                                    <span class="mx-4" />
+                                    <field name="epa_salary" />
+                                </div>
+                            </group>
+                        </div>
+                    </group>
+                    <group name="responsibilities" string="Responsibilities">
+                        <field name="epa_responsibilities" />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>
