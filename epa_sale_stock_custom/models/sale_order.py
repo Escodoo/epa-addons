@@ -16,41 +16,54 @@ class SaleOrder(models.Model):
             ("cancel", "Delivery Cancelled"),
             ("no", "Nothing to Deliver"),
         ],
-        string="Picking Status",
         compute="_compute_picking_status",
-        store=True,
+        search="_search_picking_status",
         readonly=True,
-        default="no",
     )
 
     @api.depends("state", "picking_ids.state")
     def _compute_picking_status(self):
-        """
-        Compute the picking status for the SO. Possible statuses:
-        - no: if the SO is not in status 'sale' nor 'done', we consider that
-          there is nothing to deliver. This is also the default value if the
-          conditions of no other status is met.
-        - cancel: all pickings are cancelled
-        - delivered: if all  pickings are done or cancel.
-        - partially_delivered: If at least one picking is done.
-        - to_deliver: if all pickings are in confirmed, assigned, waiting or
-          cancel state.
-        """
         for order in self:
-            picking_status = "no"
-            if order.state in ("sale", "done") and order.picking_ids:
-                pstates = [picking.state for picking in order.picking_ids]
-                if all([state == "cancel" for state in pstates]):
-                    picking_status = "cancel"
-                elif all([state in ("done", "cancel") for state in pstates]):
-                    picking_status = "delivered"
-                elif any([state == "done" for state in pstates]):
-                    picking_status = "partially_delivered"
-                elif all(
-                    [
-                        state in ("confirmed", "assigned", "waiting", "cancel")
-                        for state in pstates
-                    ]
-                ):
-                    picking_status = "to_deliver"
-            order.picking_status = picking_status
+            order.picking_status = order._get_picking_status()
+
+    def _get_picking_status(self):
+        self.ensure_one()
+        picking_status = "no"
+        if self.state in ("sale", "done") and self.picking_ids:
+            pstates = self.picking_ids.mapped("state")
+            if all([state == "cancel" for state in pstates]):
+                picking_status = "cancel"
+            elif all([state in ("done", "cancel") for state in pstates]):
+                picking_status = "delivered"
+            elif any([state == "done" for state in pstates]):
+                picking_status = "partially_delivered"
+            elif all(
+                [
+                    state in ("confirmed", "assigned", "waiting", "cancel")
+                    for state in pstates
+                ]
+            ):
+                picking_status = "to_deliver"
+        return picking_status
+
+    @api.model
+    def _search_picking_status(self, operator, value):
+        orders = self.search(
+            [
+                ("state", "in", ("sale", "done")),
+                ("picking_ids", "!=", False),
+            ]
+        )
+
+        if operator == "=":
+            orders = orders.filtered(lambda o: o._get_picking_status() == value)
+        elif operator == "!=":
+            orders = orders.filtered(lambda o: o._get_picking_status() != value)
+        elif operator == "in":
+            orders = orders.filtered(lambda o: o._get_picking_status() in value)
+        elif operator == "not in":
+            orders = orders.filtered(lambda o: o._get_picking_status() not in value)
+        else:
+            raise ValueError("Unsupported operator %s" % operator)
+
+        return [("id", "in", orders.ids)]
